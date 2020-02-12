@@ -1,4 +1,5 @@
 <?php
+
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
     require __DIR__ . '/../../common/config/params-local.php',
@@ -6,7 +7,7 @@ $params = array_merge(
     require __DIR__ . '/params-local.php'
 );
 
-return [
+$return = [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
@@ -14,12 +15,13 @@ return [
     'modules' => [],
     'components' => [
         'request' => [
-            'csrfParam' => '_csrf-backend',
+            'csrfParam' => '_csrf-backend'
         ],
         'user' => [
+            'class' => 'backend\components\BackendUser',
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
-            'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
+            'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true]
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
@@ -30,21 +32,23 @@ return [
             'targets' => [
                 [
                     'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
+                    'levels' => ['error', 'warning']
                 ],
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'site/error'
         ],
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-            ],
-        ],
-        */
+            ]
+        ]
     ],
-    'params' => $params,
+    'params' => $params
 ];
+
+$return = Denis909\CascadeFilesystem\CascadeConfig::mergeConfig('backend.php', $return);
+
+return $return;

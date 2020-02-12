@@ -1,0 +1,1 @@
+git remote add prod ssh://denis909@test.denis909.spb.ru/home/d/denis909/test.denis909.spb.ru/proverka-pos.git
