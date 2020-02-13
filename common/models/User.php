@@ -24,10 +24,12 @@ use yii\web\IdentityInterface;
  */
 class User extends ActiveRecord implements IdentityInterface
 {
-    const STATUS_DELETED = 0;
-    const STATUS_INACTIVE = 9;
-    const STATUS_ACTIVE = 10;
 
+    const STATUS_DELETED = 0;
+
+    const STATUS_INACTIVE = 9;
+    
+    const STATUS_ACTIVE = 10;
 
     /**
      * {@inheritdoc}
@@ -47,6 +49,15 @@ class User extends ActiveRecord implements IdentityInterface
         ];
     }
 
+    public static function statusList()
+    {
+        return [
+            self::STATUS_ACTIVE => Yii::t('user', 'Active'), 
+            self::STATUS_INACTIVE => Yii::t('user', 'Inactive'), 
+            self::STATUS_DELETED => Yii::t('user', 'Deleted')
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -54,7 +65,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             ['status', 'default', 'value' => self::STATUS_INACTIVE],
-            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_INACTIVE, self::STATUS_DELETED]],
+            ['status', 'in', 'range' => array_keys(static::statusList())],
         ];
     }
 
@@ -93,14 +104,12 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function findByPasswordResetToken($token)
     {
-        if (!static::isPasswordResetTokenValid($token)) {
+        if (!static::isPasswordResetTokenValid($token))
+        {
             return null;
         }
 
-        return static::findOne([
-            'password_reset_token' => $token,
-            'status' => self::STATUS_ACTIVE,
-        ]);
+        return static::findOne(['password_reset_token' => $token, 'status' => self::STATUS_ACTIVE]);
     }
 
     /**
@@ -109,11 +118,9 @@ class User extends ActiveRecord implements IdentityInterface
      * @param string $token verify email token
      * @return static|null
      */
-    public static function findByVerificationToken($token) {
-        return static::findOne([
-            'verification_token' => $token,
-            'status' => self::STATUS_INACTIVE
-        ]);
+    public static function findByVerificationToken($token)
+    {
+        return static::findOne(['verification_token' => $token, 'status' => self::STATUS_INACTIVE]);
     }
 
     /**
@@ -124,12 +131,15 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function isPasswordResetTokenValid($token)
     {
-        if (empty($token)) {
+        if (empty($token))
+        {
             return false;
         }
 
         $timestamp = (int) substr($token, strrpos($token, '_') + 1);
+
         $expire = Yii::$app->params['user.passwordResetTokenExpire'];
+
         return $timestamp + $expire >= time();
     }
 
@@ -209,4 +219,5 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
+
 }

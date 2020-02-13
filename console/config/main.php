@@ -1,6 +1,6 @@
 <?php
 
-use Denis909\CascadeConfig\CascadeConfig;
+use Denis909\CascadeFilesystem\CascadeConfig;
 
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
@@ -21,7 +21,11 @@ $return = [
     'controllerMap' => [
         'fixture' => [
             'class' => 'yii\console\controllers\FixtureController',
-            'namespace' => 'common\fixtures'
+            'namespace' => 'common\fixtures',
+        ],
+        'migrate' => [
+            'class' => 'yii\console\controllers\MigrateController',
+            'migrationTable' => 'migration'
         ]
     ],
     'components' => [
@@ -37,6 +41,6 @@ $return = [
     'params' => $params
 ];
 
-$return = CascadeConfig::mergeConfig('console.php');
+$return = CascadeConfig::mergeConfig('console.php', $return);
 
 return $return;

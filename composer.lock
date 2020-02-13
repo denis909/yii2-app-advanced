@@ -69,7 +69,7 @@
             "version": "3.4.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:jquery/jquery-dist.git",
+                "url": "https://github.com/jquery/jquery-dist.git",
                 "reference": "15bc73803f76bc53b654b9fdbbbc096f56d7c03d"
             },
             "dist": {
@@ -184,25 +184,28 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/cascade-filesystem.git",
-                "reference": "3e30b8fbfa861548322da20c717255e86adbce13"
+                "reference": "cb017368a2ffebd8a766046fc21c8daaf0f24f6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/cascade-filesystem/zipball/3e30b8fbfa861548322da20c717255e86adbce13",
-                "reference": "3e30b8fbfa861548322da20c717255e86adbce13",
+                "url": "https://api.github.com/repos/denis909/cascade-filesystem/zipball/cb017368a2ffebd8a766046fc21c8daaf0f24f6d",
+                "reference": "cb017368a2ffebd8a766046fc21c8daaf0f24f6d",
                 "shasum": ""
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "Denis909\\CascadeFilesystem\\": ""
-                }
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "time": "2020-02-12T16:15:39+00:00"
+            "time": "2020-02-13T13:16:52+00:00"
         },
         {
             "name": "denis909/yii2-action-column",
@@ -236,12 +239,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-backend.git",
-                "reference": "8bf891c734f433348a163c6f73578add430e93a9"
+                "reference": "b5902b21d875a28aa890ff64fd5136428fb8e5a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-backend/zipball/8bf891c734f433348a163c6f73578add430e93a9",
-                "reference": "8bf891c734f433348a163c6f73578add430e93a9",
+                "url": "https://api.github.com/repos/denis909/yii2-backend/zipball/b5902b21d875a28aa890ff64fd5136428fb8e5a4",
+                "reference": "b5902b21d875a28aa890ff64fd5136428fb8e5a4",
                 "shasum": ""
             },
             "require": {
@@ -257,7 +260,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-02-12T16:49:18+00:00"
+            "time": "2020-02-13T07:40:13+00:00"
         },
         {
             "name": "denis909/yii2-backend-user",
@@ -462,12 +465,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-theme-sbadmin2.git",
-                "reference": "acd2f44d7f7f732fd471947613c611895b814a35"
+                "reference": "eb16f2b846dddd35bee188c3e592f34009951a0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-theme-sbadmin2/zipball/acd2f44d7f7f732fd471947613c611895b814a35",
-                "reference": "acd2f44d7f7f732fd471947613c611895b814a35",
+                "url": "https://api.github.com/repos/denis909/yii2-theme-sbadmin2/zipball/eb16f2b846dddd35bee188c3e592f34009951a0c",
+                "reference": "eb16f2b846dddd35bee188c3e592f34009951a0c",
                 "shasum": ""
             },
             "require": {
@@ -486,7 +489,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2020-02-12T16:47:27+00:00"
+            "time": "2020-02-13T07:37:33+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -556,12 +559,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "e834eea5306d85d67de5a05db5882911d5b29357"
+                "reference": "5065fafc8c29d229ff207f2a89b02175f479a909"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/e834eea5306d85d67de5a05db5882911d5b29357",
-                "reference": "e834eea5306d85d67de5a05db5882911d5b29357",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/5065fafc8c29d229ff207f2a89b02175f479a909",
+                "reference": "5065fafc8c29d229ff207f2a89b02175f479a909",
                 "shasum": ""
             },
             "require": {
@@ -606,7 +609,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2020-01-20T21:40:59+00:00"
+            "time": "2020-02-12T22:28:28+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -1314,12 +1317,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "6c9dfa9b5da91a87579afa9ddbab50bda87b23c8"
+                "reference": "28e83cc4307b11751d93c4c69c100b8a6ec94312"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/6c9dfa9b5da91a87579afa9ddbab50bda87b23c8",
-                "reference": "6c9dfa9b5da91a87579afa9ddbab50bda87b23c8",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/28e83cc4307b11751d93c4c69c100b8a6ec94312",
+                "reference": "28e83cc4307b11751d93c4c69c100b8a6ec94312",
                 "shasum": ""
             },
             "require": {
@@ -1367,7 +1370,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2020-02-11T11:13:21+00:00"
+            "time": "2020-02-12T17:55:36+00:00"
         },
         {
             "name": "symfony/polyfill-iconv",
@@ -2569,12 +2572,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "e193ff330a0f28b5e5f65ed3d804f5e2a89376e3"
+                "reference": "c73b502efd02beb2602500aa36793fb405e383ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/e193ff330a0f28b5e5f65ed3d804f5e2a89376e3",
-                "reference": "e193ff330a0f28b5e5f65ed3d804f5e2a89376e3",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/c73b502efd02beb2602500aa36793fb405e383ac",
+                "reference": "c73b502efd02beb2602500aa36793fb405e383ac",
                 "shasum": ""
             },
             "require": {
@@ -2590,7 +2593,7 @@
                 "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
             },
             "suggest": {
-                "zendframework/zend-httphandlerrunner": "Emit PSR-7 responses"
+                "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
             "type": "library",
             "extra": {
@@ -2632,7 +2635,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2020-02-04T14:54:51+00:00"
+            "time": "2020-02-12T23:13:46+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2907,12 +2910,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "50e77ace682d81779b87e554bdbfc7fb0e6f8d53"
+                "reference": "edea3e869367921987704325b997a80cdaea6d66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/50e77ace682d81779b87e554bdbfc7fb0e6f8d53",
-                "reference": "50e77ace682d81779b87e554bdbfc7fb0e6f8d53",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/edea3e869367921987704325b997a80cdaea6d66",
+                "reference": "edea3e869367921987704325b997a80cdaea6d66",
                 "shasum": ""
             },
             "require": {
@@ -2952,7 +2955,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2020-02-12T07:18:08+00:00"
+            "time": "2020-02-12T20:05:04+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",

@@ -14,6 +14,9 @@ $return = [
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
+        'backendTheme' => [
+            'class' => 'denis909\sbadmin2\Theme'
+        ],
         'request' => [
             'csrfParam' => '_csrf-backend'
         ],
