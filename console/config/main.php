@@ -41,6 +41,6 @@ $return = [
     'params' => $params
 ];
 
-$return = CascadeConfig::mergeConfig('console.php', $return);
+$return = CascadeConfig::mergeConfig('console', $return);
 
 return $return;

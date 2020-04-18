@@ -64,6 +64,7 @@ class User extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
+            [['created_at', 'updated_at'], 'number', 'integerOnly' => true, 'enableClientValidation' => false],
             ['status', 'default', 'value' => self::STATUS_INACTIVE],
             ['status', 'in', 'range' => array_keys(static::statusList())],
         ];
@@ -218,6 +219,16 @@ class User extends ActiveRecord implements IdentityInterface
     public function removePasswordResetToken()
     {
         $this->password_reset_token = null;
+    }
+
+    public function getCreatedAsDatetime()
+    {
+        return Yii::$app->formatter->asDatetime($this->created_at, 'php:Y-m-d H:i:s');
+    }
+
+    public function getUpdatedAsDatetime()
+    {
+        return Yii::$app->formatter->asDatetime($this->updated_at, 'php:Y-m-d H:i:s');
     }
 
 }

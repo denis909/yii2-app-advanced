@@ -1,5 +1,7 @@
 <?php
 
+use Denis909\CascadeFilesystem\CascadeConfig;
+
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
     require __DIR__ . '/../../common/config/params-local.php',
@@ -21,10 +23,10 @@ $return = [
             'csrfParam' => '_csrf-backend'
         ],
         'user' => [
-            'class' => 'backend\components\BackendUser',
-            'identityClass' => 'common\models\User',
-            'enableAutoLogin' => true,
-            'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true]
+            'class' => 'frontend\components\FrontendWebUser'
+        ],
+        'backendUser' => [
+            'class' => 'backend\components\BackendWebUser'
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
@@ -46,12 +48,14 @@ $return = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'site/login' => 'login',
+                'site/logout' => 'logout'
             ]
         ]
     ],
     'params' => $params
 ];
 
-$return = Denis909\CascadeFilesystem\CascadeConfig::mergeConfig('backend.php', $return);
+$return = CascadeConfig::mergeConfig('backend', $return);
 
 return $return;

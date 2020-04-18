@@ -9,8 +9,11 @@ $return = [
     ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
+        'formatter' => [
+            'timeZone' => 'Europe/Moscow'
+        ],
         'cache' => [
-            'class' => 'yii\caching\FileCache'
+            'class' => 'yii\caching\DummyCache'
         ],
         'i18n' => [
             'translations' => [ 
@@ -23,6 +26,6 @@ $return = [
     ]
 ];
 
-$return = CascadeConfig::mergeConfig('common.php', $return);
+$return = CascadeConfig::mergeConfig('common', $return);
 
 return $return;

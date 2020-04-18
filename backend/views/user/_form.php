@@ -17,15 +17,35 @@ $backendTheme = Yii::$app->backendTheme;
 	'enableAjaxValidation' => false
 ]); ?>
 
-<?= $form->errorSummary($model);?>
+<?php
 
-<?= $form->field($model, 'username')->textInput(['maxlength' => true]);?>
+echo $form->errorSummary($model);
 
-<?= $form->field($model, 'email')->textInput(['maxlength' => true]);?>
+echo $form->field($model, 'username')->textInput(['maxlength' => true]);
 
-<?= $form->field($model, 'status')->dropDownList($model->statusList, ['prompt' => '...']);?>
+echo $form->field($model, 'created_at')->datetime([
+    'options' => [
+        'maxlength' => true, 
+        'disabled' => !$model->isAttributeSafe('created_at'),
+        'value' => $model->createdAsDatetime
+    ]
+]);
 
-<?= $form->field($model, 'password')->passwordInput(['maxlength' => true]);?>
+echo $form->field($model, 'updated_at')->datetime([
+    'options' => [
+        'maxlength' => true,
+        'disabled' => !$model->isAttributeSafe('updated_at'),
+        'value' => $model->updatedAsDatetime
+    ]
+]);
+
+echo $form->field($model, 'email')->textInput(['maxlength' => true]);
+
+echo $form->field($model, 'status')->dropDownList($model->statusList, ['prompt' => '...']);
+
+echo $form->field($model, 'password')->passwordInput(['maxlength' => true]);
+
+?>
 
 <div class="form-group">
 
