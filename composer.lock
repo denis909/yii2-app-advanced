@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7577c4dd2de83c9ebafe917696f1585f",
+    "content-hash": "246abc03ced0bcc3161865b2d98e624a",
     "packages": [
         {
             "name": "bower-asset/glyphicons",
@@ -212,6 +212,73 @@
             "time": "2020-02-24T12:05:31+00:00"
         },
         {
+            "name": "denis909/yii2-active-record",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-active-record.git",
+                "reference": "c2b18f0c7b71cf1cc2dc524492ec9e657f090229"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-active-record/zipball/c2b18f0c7b71cf1cc2dc524492ec9e657f090229",
+                "reference": "c2b18f0c7b71cf1cc2dc524492ec9e657f090229",
+                "shasum": ""
+            },
+            "require": {
+                "denis909/yii2-model": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\yii\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "denis909",
+                    "email": "mail@denis909.spb.ru"
+                }
+            ],
+            "time": "2020-04-18T15:57:03+00:00"
+        },
+        {
+            "name": "denis909/yii2-attribute-typecast-behavior",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-attribute-typecast-behavior.git",
+                "reference": "7cb3d532bbafd8639706ff0deaf8f87d9f3b516f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-attribute-typecast-behavior/zipball/7cb3d532bbafd8639706ff0deaf8f87d9f3b516f",
+                "reference": "7cb3d532bbafd8639706ff0deaf8f87d9f3b516f",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\yii\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "denis909",
+                    "email": "mail@denis909.spb.ru"
+                }
+            ],
+            "time": "2020-04-19T10:52:31+00:00"
+        },
+        {
             "name": "denis909/yii2-backend",
             "version": "dev-master",
             "source": {
@@ -296,6 +363,41 @@
             "time": "2019-12-26T10:48:54+00:00"
         },
         {
+            "name": "denis909/yii2-datetime-formatter-behavior",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-datetime-formatter-behavior.git",
+                "reference": "6274c612b4d6f550029424dd1fe9739c2c35ca0e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-datetime-formatter-behavior/zipball/6274c612b4d6f550029424dd1fe9739c2c35ca0e",
+                "reference": "6274c612b4d6f550029424dd1fe9739c2c35ca0e",
+                "shasum": ""
+            },
+            "require": {
+                "denis909/yii2-formatter-behavior": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\yii\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "denis909",
+                    "email": "mail@denis909.spb.ru"
+                }
+            ],
+            "time": "2020-04-19T08:49:02+00:00"
+        },
+        {
             "name": "denis909/yii2-fake-bootstrap4",
             "version": "1.0",
             "source": {
@@ -318,6 +420,38 @@
                 "MIT"
             ],
             "time": "2018-11-28T13:36:07+00:00"
+        },
+        {
+            "name": "denis909/yii2-formatter-behavior",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-formatter-behavior.git",
+                "reference": "7fa551af0a84e9837bb0d124d4a7d511e73980ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-formatter-behavior/zipball/7fa551af0a84e9837bb0d124d4a7d511e73980ba",
+                "reference": "7fa551af0a84e9837bb0d124d4a7d511e73980ba",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\yii\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "denis909",
+                    "email": "mail@denis909.spb.ru"
+                }
+            ],
+            "time": "2020-04-19T08:48:44+00:00"
         },
         {
             "name": "denis909/yii2-glyphicons",
@@ -373,6 +507,38 @@
                 "MIT"
             ],
             "time": "2020-01-25T15:29:01+00:00"
+        },
+        {
+            "name": "denis909/yii2-model",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-model.git",
+                "reference": "3ea9a1a5771320ede5905818c5180f07fc6231d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-model/zipball/3ea9a1a5771320ede5905818c5180f07fc6231d1",
+                "reference": "3ea9a1a5771320ede5905818c5180f07fc6231d1",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\yii\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "denis909",
+                    "email": "mail@denis909.spb.ru"
+                }
+            ],
+            "time": "2020-04-19T09:03:41+00:00"
         },
         {
             "name": "denis909/yii2-theme",
@@ -471,6 +637,42 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "time": "2020-02-24T11:51:25+00:00"
+        },
+        {
+            "name": "denis909/yii2-typecast-behavior",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-typecast-behavior.git",
+                "reference": "e1684e29c46ffb2a4bed53634441e9151557dff0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-typecast-behavior/zipball/e1684e29c46ffb2a4bed53634441e9151557dff0",
+                "reference": "e1684e29c46ffb2a4bed53634441e9151557dff0",
+                "shasum": ""
+            },
+            "require": {
+                "denis909/yii2-active-record": "*",
+                "denis909/yii2-attribute-typecast-behavior": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\yii\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "denis909",
+                    "email": "mail@denis909.spb.ru"
+                }
+            ],
+            "time": "2020-04-19T10:19:34+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -2166,16 +2368,16 @@
         },
         {
             "name": "codeception/module-asserts",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/module-asserts.git",
-                "reference": "87c83ca3ccfbc0d79f5effb57e1f82eeaab0cb3e"
+                "reference": "f9bfbb4be4b993f5b315eba9eecaa1b358c2fcd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/module-asserts/zipball/87c83ca3ccfbc0d79f5effb57e1f82eeaab0cb3e",
-                "reference": "87c83ca3ccfbc0d79f5effb57e1f82eeaab0cb3e",
+                "url": "https://api.github.com/repos/Codeception/module-asserts/zipball/f9bfbb4be4b993f5b315eba9eecaa1b358c2fcd2",
+                "reference": "f9bfbb4be4b993f5b315eba9eecaa1b358c2fcd2",
                 "shasum": ""
             },
             "require": {
@@ -2214,7 +2416,7 @@
                 "asserts",
                 "codeception"
             ],
-            "time": "2019-11-13T17:32:27+00:00"
+            "time": "2020-04-18T10:01:11+00:00"
         },
         {
             "name": "codeception/module-filesystem",
@@ -4991,16 +5193,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598"
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/aed98a490f9a8f78468232db345ab9cf606cf598",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
                 "shasum": ""
             },
             "require": {
@@ -5008,7 +5210,7 @@
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
-                "vimeo/psalm": "<3.6.0"
+                "vimeo/psalm": "<3.9.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.8.36 || ^7.5.13"
@@ -5035,7 +5237,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-02-14T12:15:55+00:00"
+            "time": "2020-04-18T12:12:48+00:00"
         },
         {
             "name": "yiisoft/yii2-debug",
@@ -5196,7 +5398,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "denis909/yii2-typecast-behavior": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

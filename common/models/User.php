@@ -3,9 +3,9 @@ namespace common\models;
 
 use Yii;
 use yii\base\NotSupportedException;
-use yii\behaviors\TimestampBehavior;
-use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
+use yii\behaviors\TimestampBehavior;
+use denis909\yii\DatetimeFormatterBehavior;
 
 /**
  * User model
@@ -22,7 +22,7 @@ use yii\web\IdentityInterface;
  * @property integer $updated_at
  * @property string $password write-only password
  */
-class User extends ActiveRecord implements IdentityInterface
+class User extends \denis909\yii\ActiveRecord implements IdentityInterface
 {
 
     const STATUS_DELETED = 0;
@@ -45,7 +45,14 @@ class User extends ActiveRecord implements IdentityInterface
     public function behaviors()
     {
         return [
-            TimestampBehavior::className(),
+            TimestampBehavior::class,
+            [
+                'class' => DatetimeFormatterBehavior::class,
+                'attributes' => [
+                    'created_at' => 'createdAsDatetime', 
+                    'updated_at' => 'updatedAsDatetime'
+                ]
+            ]
         ];
     }
 
@@ -221,14 +228,19 @@ class User extends ActiveRecord implements IdentityInterface
         $this->password_reset_token = null;
     }
 
-    public function getCreatedAsDatetime()
+    /**
+     * {@inheritdoc}
+     */
+    public function beforeSave($insert)
     {
-        return Yii::$app->formatter->asDatetime($this->created_at, 'php:Y-m-d H:i:s');
-    }
+        if ($insert)
+        {
+            $this->generateAuthKey();
 
-    public function getUpdatedAsDatetime()
-    {
-        return Yii::$app->formatter->asDatetime($this->updated_at, 'php:Y-m-d H:i:s');
-    }
+            $this->generateEmailVerificationToken();
+        }
+
+        return parent::beforeSave($insert);
+    }    
 
 }
