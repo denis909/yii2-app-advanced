@@ -16,6 +16,7 @@ $return = [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [],
+    'language' => 'ru',
     'components' => [
         'backendTheme' => [
             'class' => 'denis909\sbadmin2\Theme'

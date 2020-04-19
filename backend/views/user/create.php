@@ -10,7 +10,7 @@ use yii\helpers\Html;
 require __DIR__ . '/_common.php';
 
 $this->params['breadcrumbs'][] = ['label' => $this->title, 'url' => ['index']];
-$this->params['breadcrumbs'][] = 'Create';
+$this->params['breadcrumbs'][] = Yii::t('backend', 'Create');
 ?>
 
 <?= $this->render('_form', [

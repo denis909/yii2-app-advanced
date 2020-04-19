@@ -241,6 +241,19 @@ class User extends \denis909\yii\ActiveRecord implements IdentityInterface
         }
 
         return parent::beforeSave($insert);
-    }    
+    }
+
+    public function attributeLabels()
+    {
+        return [
+            'id' => Yii::t('user', 'ID'),
+            'username' => Yii::t('user', 'Username'),
+            'created_at' => Yii::t('user', 'Created'),
+            'updated_at' => Yii::t('user', 'Updated'),
+            'status' => Yii::t('user', 'Status'),
+            'password_hash' => Yii::t('user', 'Password'),
+            'email' => Yii::t('user', 'E-mail')
+        ];
+    }
 
 }

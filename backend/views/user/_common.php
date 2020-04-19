@@ -1,7 +1,7 @@
 <?php
 
- Yii::$app->params['adminMenu']['user']['active'] = true;
+ Yii::$app->params['backendMenu']['users']['active'] = true;
 
- $this->title = 'Users';
+ $this->title = Yii::t('user', 'Users');
 
  $this->params['enableCard'] = true;

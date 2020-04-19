@@ -9,9 +9,9 @@ use yii\helpers\Html;
 require __DIR__ . '/_common.php';
 
 $this->params['breadcrumbs'][] = ['label' => $this->title, 'url' => ['index']];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = Yii::t('backend', 'Update');
 
-$this->params['cardTitle'] = 'Update';
+$this->params['cardTitle'] = Yii::t('backend', 'Update');
 
 ?>
 

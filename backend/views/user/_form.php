@@ -49,7 +49,9 @@ echo $form->field($model, 'password')->passwordInput(['maxlength' => true]);
 
 <div class="form-group">
 
-    <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+    <?= Html::submitButton($model->isNewRecord ? Yii::t('backend', 'Create') : Yii::t('backend', 'Update'), [
+        'class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary'
+    ]) ?>
 
 </div>
 

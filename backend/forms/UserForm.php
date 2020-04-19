@@ -2,6 +2,7 @@
 
 namespace backend\forms;
 
+use Yii;
 use yii\helpers\ArrayHelper;
 use denis909\yii\TypecastBehavior;
 
@@ -68,6 +69,13 @@ class UserForm extends \common\models\User
                     'updated_at' => TypecastBehavior::TYPE_UNIX_TIMESTAMP
                 ]
             ]
+        ]);
+    }
+
+    public function attributeLabels()
+    {
+        return ArrayHelper::merge(parent::attributeLabels(), [
+            'password' => Yii::t('user', 'Password')
         ]);
     }
 

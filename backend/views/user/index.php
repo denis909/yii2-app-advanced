@@ -9,11 +9,15 @@ require __DIR__ . '/_common.php';
 
 $this->params['breadcrumbs'][] = $this->title;
 
-$this->params['actionMenu'][] = ['label' => 'Create', 'url' => ['create'], 'linkOptions' => ['class' => 'btn btn-success']];
+$this->params['actionMenu'][] = [
+    'label' => Yii::t('backend', 'Create'), 
+    'url' => ['create'], 
+    'linkOptions' => ['class' => 'btn btn-success']
+];
 
 $backendTheme = Yii::$app->backendTheme;
 
-$this->params['cardTitle'] = 'Manage';
+$this->params['cardTitle'] = Yii::t('backend', 'Manage');
 
 ?>
 
