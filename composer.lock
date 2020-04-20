@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed0b3a7120c07a95ac7ce97249521416",
+    "content-hash": "cc0a4faf8e767ea95b48aff3155045b0",
     "packages": [
         {
             "name": "bower-asset/glyphicons",
@@ -2628,58 +2628,6 @@
             "time": "2020-01-28T05:01:22+00:00"
         },
         {
-            "name": "shirase55/yii2-glide",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/shirase/yii2-glide.git",
-                "reference": "d4a7811cb1be03013e47cab9d3ff4b28b92cbb78"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/shirase/yii2-glide/zipball/d4a7811cb1be03013e47cab9d3ff4b28b92cbb78",
-                "reference": "d4a7811cb1be03013e47cab9d3ff4b28b92cbb78",
-                "shasum": ""
-            },
-            "require": {
-                "league/glide": "^1.1",
-                "league/uri": "^5.0",
-                "php": ">=5.5.9",
-                "symfony/http-foundation": "^3.0",
-                "yiisoft/yii2": "^2.0.0"
-            },
-            "replace": {
-                "trntv/yii2-glide": "*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.0"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "trntv\\glide\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Eugene Terentev",
-                    "email": "eugene@terentev.net"
-                }
-            ],
-            "description": "Yii2 Glide Extension",
-            "keywords": [
-                "extension",
-                "glide",
-                "thumbnail",
-                "yii2"
-            ],
-            "time": "2020-01-10T21:24:21+00:00"
-        },
-        {
             "name": "swiftmailer/swiftmailer",
             "version": "v6.2.3",
             "source": {
@@ -3146,7 +3094,56 @@
             "time": "2020-02-27T09:26:54+00:00"
         },
         {
-            "name": "trntv/yii2-file-kit",
+            "name": "trntv/yii2-glide",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/trntv/yii2-glide.git",
+                "reference": "a2a0fed9d236ef274a8297d01d0124bf1afe1f91"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/trntv/yii2-glide/zipball/a2a0fed9d236ef274a8297d01d0124bf1afe1f91",
+                "reference": "a2a0fed9d236ef274a8297d01d0124bf1afe1f91",
+                "shasum": ""
+            },
+            "require": {
+                "league/glide": "^1.1",
+                "league/uri": "^5.0",
+                "php": ">=5.5.9",
+                "symfony/http-foundation": "^3.0",
+                "yiisoft/yii2": "^2.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "trntv\\glide\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Eugene Terentev",
+                    "email": "eugene@terentev.net"
+                }
+            ],
+            "description": "Yii2 Glide Extension",
+            "keywords": [
+                "extension",
+                "glide",
+                "thumbnail",
+                "yii2"
+            ],
+            "time": "2018-04-26T11:16:54+00:00"
+        },
+        {
+            "name": "yii2-starter-kit/yii2-file-kit",
             "version": "2.1.4",
             "source": {
                 "type": "git",
@@ -3190,7 +3187,6 @@
                 }
             ],
             "description": "Yii2 file upload and storage kit",
-            "abandoned": "yii2-starter-kit/yii2-file-kit",
             "time": "2020-04-16T23:33:40+00:00"
         },
         {
@@ -3364,23 +3360,23 @@
         },
         {
             "name": "yiisoft/yii2-composer",
-            "version": "2.0.8",
+            "version": "2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-composer.git",
-                "reference": "5c7ca9836cf80b34db265332a7f2f8438eb469b9"
+                "reference": "d191176c4f8372e397a9e3df27360dca6a70efaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/5c7ca9836cf80b34db265332a7f2f8438eb469b9",
-                "reference": "5c7ca9836cf80b34db265332a7f2f8438eb469b9",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/d191176c4f8372e397a9e3df27360dca6a70efaa",
+                "reference": "d191176c4f8372e397a9e3df27360dca6a70efaa",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0"
+                "composer-plugin-api": "^1.0 | ^2.0"
             },
             "require-dev": {
-                "composer/composer": "^1.0",
+                "composer/composer": "^1.0 | ^2.0@dev",
                 "phpunit/phpunit": "<7"
             },
             "type": "composer-plugin",
@@ -3415,7 +3411,7 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2019-07-16T13:22:30+00:00"
+            "time": "2020-04-20T18:47:46+00:00"
         },
         {
             "name": "yiisoft/yii2-jui",

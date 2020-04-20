@@ -47,12 +47,12 @@ echo $form->field($model, 'status')->dropDownList($model->statusList, ['prompt' 
 
 echo $form->field($model, 'password')->passwordInput(['maxlength' => true]);
 
-echo $form->field($model, 'avatar')->widget(Upload::class, [
+echo $form->field($model, 'avatarFile')->widget(Upload::class, [
     'url' => ['upload-avatar'],
     'sortable' => true,
-    'maxFileSize' => $model::AVATAR_MAX_SIZE, // 10 MiB
+    'maxFileSize' => $model::AVATAR_MAX_SIZE,
     'acceptFileTypes' => new JsExpression('/(\.|\/)(' . implode('|', $model::AVATAR_FILE_TYPES) . ')$/i'),
-    'maxNumberOfFiles' => 50
+    'maxNumberOfFiles' => 1
 ]);
 
 ?>
