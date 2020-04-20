@@ -17,7 +17,20 @@ $return = [
     'bootstrap' => ['log'],
     'modules' => [],
     'language' => 'ru',
+    'controllerMap' => [
+        'glide' => '\trntv\glide\controllers\GlideController'
+    ],
     'components' => [
+        'glide' => [
+            'class' => 'trntv\glide\components\Glide',
+            'sourcePath' => '@frontend/web/source',
+            'cachePath' => '@frontend/web/cache',
+            //'maxImageSize' => env('GLIDE_MAX_IMAGE_SIZE'),
+            //'signKey' => env('GLIDE_SIGN_KEY'),
+            'defaults' => [
+                'q' => 90
+            ]
+        ],
         'backendTheme' => [
             'class' => 'denis909\sbadmin2\Theme'
         ],

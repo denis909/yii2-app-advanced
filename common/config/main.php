@@ -9,6 +9,19 @@ $return = [
     ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
+        'fileStorage' => [
+            'class' => trntv\filekit\Storage::class,
+            'baseUrl' => '/source',
+            'filesystem' => [
+                'class' => common\components\LocalFlysystemBuilder::class,
+                'path' => '@frontend/web/source'
+            ]
+            /*,
+            'as log' => [
+                'class' => common\behaviors\FileStorageLogBehavior::class,
+                'component' => 'fileStorage'
+            ]*/
+        ],
         'formatter' => [
             'timeZone' => 'Europe/Moscow'
         ],

@@ -24,7 +24,9 @@
         "denis909/yii2-theme-sbadmin2": "*",
         "denis909/yii2-datetime-formatter-behavior": "*",
         "denis909/yii2-active-record": "*",
-        "denis909/yii2-typecast-behavior": "dev-master"
+        "denis909/yii2-typecast-behavior": "*",
+        "shirase55/yii2-glide": "*",
+        "trntv/yii2-file-kit": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

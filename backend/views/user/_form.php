@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\web\JsExpression;
+use trntv\filekit\widget\Upload;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\User */
@@ -44,6 +46,14 @@ echo $form->field($model, 'email')->textInput(['maxlength' => true]);
 echo $form->field($model, 'status')->dropDownList($model->statusList, ['prompt' => '...']);
 
 echo $form->field($model, 'password')->passwordInput(['maxlength' => true]);
+
+echo $form->field($model, 'avatar')->widget(Upload::class, [
+    'url' => ['upload-avatar'],
+    'sortable' => true,
+    'maxFileSize' => $model::AVATAR_MAX_SIZE, // 10 MiB
+    'acceptFileTypes' => new JsExpression('/(\.|\/)(' . implode('|', $model::AVATAR_FILE_TYPES) . ')$/i'),
+    'maxNumberOfFiles' => 50
+]);
 
 ?>
 

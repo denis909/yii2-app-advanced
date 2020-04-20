@@ -252,7 +252,8 @@ class User extends \denis909\yii\ActiveRecord implements IdentityInterface
             'updated_at' => Yii::t('user', 'Updated'),
             'status' => Yii::t('user', 'Status'),
             'password_hash' => Yii::t('user', 'Password'),
-            'email' => Yii::t('user', 'E-mail')
+            'email' => Yii::t('user', 'E-mail'),
+            'avatar' => Yii::t('user', 'Avatar')
         ];
     }
 

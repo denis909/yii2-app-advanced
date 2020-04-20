@@ -9,6 +9,10 @@ use denis909\yii\TypecastBehavior;
 class UserForm extends \common\models\User
 {
 
+    const AVATAR_FILE_TYPES = ['gif', 'jpg', 'jpe', 'jpeg', 'png'];
+
+    const AVATAR_MAX_SIZE = 5000000; // 5 MiB
+
     public $password;
 
     protected $unsafeAttributes = ['updated_at'];

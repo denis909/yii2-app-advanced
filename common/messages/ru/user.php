@@ -10,5 +10,6 @@ return [
     'Created' => 'Зарегистирован',
     'Updated' => 'Обновлен',
     'Status' => 'Статус',
-    'Password' => 'Пароль'
+    'Password' => 'Пароль',
+    'Avatar' => 'Аватар'
 ];

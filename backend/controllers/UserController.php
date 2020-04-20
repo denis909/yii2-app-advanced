@@ -8,11 +8,34 @@ use backend\forms\UserForm as ModelForm;
 use common\models\search\UserSearch as ModelSearch;
 use yii\web\NotFoundHttpException;
 use yii\data\ActiveDataProvider;
+use trntv\filekit\actions\DeleteAction;
+use trntv\filekit\actions\UploadAction;
 
 class UserController extends \backend\components\BackendController
 {
 
     public $postActions = ['delete'];
+
+    public function actions()
+    {
+        return [
+            'upload-avatar' => [
+                'class' => UploadAction::class,
+                'deleteRoute' => 'upload-delete-avatar',
+                'validationRules' => [
+                    [
+                        'file',
+                        'image',
+                        'maxSize' => ModelForm::AVATAR_MAX_SIZE,
+                        'extensions' => ModelForm::AVATAR_FILE_TYPES
+                    ]
+                ]
+            ],
+            'upload-delete-avatar' => [
+                'class' => DeleteAction::class
+            ]
+        ];
+    }
 
     /**
      * Lists all models.
@@ -95,7 +118,6 @@ class UserController extends \backend\components\BackendController
      * @param string $id
      * @return mixed
      */
-     
     public function actionDelete($id)
     {
         $deleted = $this->findModel($id)->delete();
