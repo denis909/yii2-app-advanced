@@ -29,10 +29,12 @@ class UserController extends \backend\components\BackendController
                         'maxSize' => ModelForm::AVATAR_MAX_SIZE,
                         'extensions' => ModelForm::AVATAR_FILE_TYPES
                     ]
-                ]
+                ],
+                'fileStorage' => 'uploadedStorage'
             ],
             'upload-delete-avatar' => [
-                'class' => DeleteAction::class
+                'class' => DeleteAction::class,
+                'fileStorage' => 'uploadedStorage'
             ]
         ];
     }

@@ -48,8 +48,9 @@ return [
             'frontend/config/main-local.php'
         ],
         'createSymlink' => [
-            'backend/web/source' => 'frontend/web/source',
-            'backend/web/cache' => 'frontend/web/cache'
+            'backend/web/uploaded' => 'frontend/web/uploaded',
+            'backend/web/cache' => 'frontend/web/cache',
+            'backend/web/temp' => 'frontend/web/temp'
         ]
     ],    
     'Development' => [

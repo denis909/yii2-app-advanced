@@ -73,7 +73,8 @@ class UserForm extends \common\models\User
             [
                 'class' => UploadBehavior::class,
                 'attribute' => 'avatarFile',
-                'pathAttribute' => 'avatar'
+                'pathAttribute' => 'avatar',
+                'filesStorage' => 'uploadedStorage'
             ],
             [
                 'class' => TypecastBehavior::class,
