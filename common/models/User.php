@@ -1,11 +1,14 @@
 <?php
+
 namespace common\models;
 
 use Yii;
+use Exception;
 use yii\base\NotSupportedException;
 use yii\web\IdentityInterface;
 use yii\behaviors\TimestampBehavior;
 use denis909\yii\DatetimeFormatterBehavior;
+use denis909\yii\AttributeChangedBehavior;
 
 /**
  * User model
@@ -52,7 +55,32 @@ class User extends \denis909\yii\ActiveRecord implements IdentityInterface
                     'created_at' => 'createdAsDatetime', 
                     'updated_at' => 'updatedAsDatetime'
                 ]
+            ],
+            /*
+            [
+                'class' => AttributeChangedBehavior::class,
+                'attributes' => ['avatar'],
+                'event' => function($event) {
+
+                    if ($event->sender->avatar)
+                    {
+                        $source = Yii::getAlias('@frontend/web/source' . $event->sender->avatar)
+
+                        if (!rename($source, $target))
+                        {
+                            throw new Exception('Rename failed.');
+                        }
+
+                        var_dump($this->avatar);
+
+                        die;
+
+                        $event->sender->avatar = '/users' . $event->sender->avatar; 
+
+                    }
+                }
             ]
+            */
         ];
     }
 

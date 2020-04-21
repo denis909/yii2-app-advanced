@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc0a4faf8e767ea95b48aff3155045b0",
+    "content-hash": "62d7c03089cc29422ae541a75304d6a0",
     "packages": [
         {
             "name": "bower-asset/glyphicons",
@@ -266,6 +266,32 @@
                 }
             ],
             "time": "2020-04-18T15:57:03+00:00"
+        },
+        {
+            "name": "denis909/yii2-attribute-changed-behavior",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-attribute-changed-behavior.git",
+                "reference": "506c9c415b5bcae362e3e714bb1e460dafb59eb7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-attribute-changed-behavior/zipball/506c9c415b5bcae362e3e714bb1e460dafb59eb7",
+                "reference": "506c9c415b5bcae362e3e714bb1e460dafb59eb7",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\yii\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2020-03-24T10:59:23+00:00"
         },
         {
             "name": "denis909/yii2-attribute-typecast-behavior",

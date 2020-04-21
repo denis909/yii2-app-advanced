@@ -26,7 +26,8 @@
         "denis909/yii2-active-record": "*",
         "denis909/yii2-typecast-behavior": "*",
         "trntv/yii2-glide": "*",
-        "yii2-starter-kit/yii2-file-kit": "*"
+        "yii2-starter-kit/yii2-file-kit": "*",
+        "denis909/yii2-attribute-changed-behavior": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
