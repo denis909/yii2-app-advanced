@@ -5,7 +5,7 @@ namespace backend\forms;
 use Yii;
 use yii\helpers\ArrayHelper;
 use denis909\yii\TypecastBehavior;
-use trntv\filekit\behaviors\UploadBehavior;
+use denis909\storage\components\StorageUploadBehavior;
 
 class UserForm extends \common\models\User
 {
@@ -71,10 +71,9 @@ class UserForm extends \common\models\User
     {
         return ArrayHelper::merge(parent::behaviors(), [
             [
-                'class' => UploadBehavior::class,
+                'class' => StorageUploadBehavior::class,
                 'attribute' => 'avatarFile',
-                'pathAttribute' => 'avatar',
-                'filesStorage' => 'uploadedStorage'
+                'pathAttribute' => 'avatar'
             ],
             [
                 'class' => TypecastBehavior::class,

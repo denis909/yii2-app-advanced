@@ -25,9 +25,9 @@
         "denis909/yii2-datetime-formatter-behavior": "*",
         "denis909/yii2-active-record": "*",
         "denis909/yii2-typecast-behavior": "*",
-        "trntv/yii2-glide": "*",
-        "yii2-starter-kit/yii2-file-kit": "*",
-        "denis909/yii2-attribute-changed-behavior": "*"
+        "denis909/yii2-attribute-changed-behavior": "*",
+        "denis909/yii2-storage": "*",
+        "denis909/yii2-glide": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

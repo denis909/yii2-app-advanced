@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62d7c03089cc29422ae541a75304d6a0",
+    "content-hash": "d7cc525b472bb095ceea61b0799e58d1",
     "packages": [
         {
             "name": "bower-asset/glyphicons",
@@ -501,6 +501,41 @@
             "time": "2020-04-19T08:48:44+00:00"
         },
         {
+            "name": "denis909/yii2-glide",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-glide.git",
+                "reference": "64971b6fb8a7339854278350f5295f389215ffdd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-glide/zipball/64971b6fb8a7339854278350f5295f389215ffdd",
+                "reference": "64971b6fb8a7339854278350f5295f389215ffdd",
+                "shasum": ""
+            },
+            "require": {
+                "trntv/yii2-glide": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\glide\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "denis909",
+                    "email": "mail@denis909.spb.ru"
+                }
+            ],
+            "time": "2020-04-21T19:21:03+00:00"
+        },
+        {
             "name": "denis909/yii2-glyphicons",
             "version": "1.1",
             "source": {
@@ -588,17 +623,53 @@
             "time": "2020-04-19T09:03:41+00:00"
         },
         {
+            "name": "denis909/yii2-storage",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-storage.git",
+                "reference": "ebf611df881b3fce2b67f21481814756bd7b8f45"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-storage/zipball/ebf611df881b3fce2b67f21481814756bd7b8f45",
+                "reference": "ebf611df881b3fce2b67f21481814756bd7b8f45",
+                "shasum": ""
+            },
+            "require": {
+                "denis909/cascade-filesystem": "*",
+                "yii2-starter-kit/yii2-file-kit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\storage\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "denis909",
+                    "email": "mail@denis909.spb.ru"
+                }
+            ],
+            "time": "2020-04-21T19:49:59+00:00"
+        },
+        {
             "name": "denis909/yii2-theme",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-theme.git",
-                "reference": "d6e9aed8fe78b59e675d78198bc8b80dcb327ce0"
+                "reference": "28d738138bcf1ea32ba10abf2c57e9e630e5ddfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-theme/zipball/d6e9aed8fe78b59e675d78198bc8b80dcb327ce0",
-                "reference": "d6e9aed8fe78b59e675d78198bc8b80dcb327ce0",
+                "url": "https://api.github.com/repos/denis909/yii2-theme/zipball/28d738138bcf1ea32ba10abf2c57e9e630e5ddfa",
+                "reference": "28d738138bcf1ea32ba10abf2c57e9e630e5ddfa",
                 "shasum": ""
             },
             "require": {
@@ -616,7 +687,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-02-20T19:45:43+00:00"
+            "time": "2020-04-21T20:03:30+00:00"
         },
         {
             "name": "denis909/yii2-theme-bootstrap4",

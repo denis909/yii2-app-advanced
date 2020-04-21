@@ -3,13 +3,15 @@
 namespace backend\controllers;
 
 use Yii;
+use yii\helpers\Url;
 use common\models\User as Model;
 use backend\forms\UserForm as ModelForm;
 use common\models\search\UserSearch as ModelSearch;
+use yii\web\HttpException;
 use yii\web\NotFoundHttpException;
 use yii\data\ActiveDataProvider;
-use trntv\filekit\actions\DeleteAction;
-use trntv\filekit\actions\UploadAction;
+use denis909\storage\components\StorageDeleteAction;
+use denis909\storage\components\StorageUploadAction;
 
 class UserController extends \backend\components\BackendController
 {
@@ -20,7 +22,7 @@ class UserController extends \backend\components\BackendController
     {
         return [
             'upload-avatar' => [
-                'class' => UploadAction::class,
+                'class' => StorageUploadAction::class,
                 'deleteRoute' => 'upload-delete-avatar',
                 'validationRules' => [
                     [
@@ -29,12 +31,10 @@ class UserController extends \backend\components\BackendController
                         'maxSize' => ModelForm::AVATAR_MAX_SIZE,
                         'extensions' => ModelForm::AVATAR_FILE_TYPES
                     ]
-                ],
-                'fileStorage' => 'uploadedStorage'
+                ]
             ],
             'upload-delete-avatar' => [
-                'class' => DeleteAction::class,
-                'fileStorage' => 'uploadedStorage'
+                'class' => StorageDeleteAction::class
             ]
         ];
     }
@@ -66,25 +66,27 @@ class UserController extends \backend\components\BackendController
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate($returnUrl = false)
+    public function actionCreate($returnUrl = null)
     {
         $model = new ModelForm;
 
         if ($model->load(Yii::$app->request->post()) && $model->save())
         {
-            if ($returnUrl && \yii\helpers\Url::isRelative($returnUrl))
+            if (Yii::$app->request->post('action') == 'save')
             {
-                return $this->redirect($returnUrl);
+                Yii::$app->session->addFlash('success', Yii::t('backend', 'Data saved.'));
+                
+                return $this->redirect(['update', 'id' => $model->id, 'returnUrl' => $returnUrl]);
             }
-
-            return $this->redirect([$this->defaultAction]);
+            else
+            {
+                return $this->redirectBack();
+            }            
         } 
-        else
-        {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
+
+        return $this->render('create', [
+            'model' => $model
+        ]);
     }
 
     /**
@@ -93,25 +95,25 @@ class UserController extends \backend\components\BackendController
      * @param string $id
      * @return mixed
      */
-    public function actionUpdate($id, $returnUrl = false)
+    public function actionUpdate($id)
     {
         $model = $this->findModel($id, ModelForm::class);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) 
         {
-            if ($returnUrl && \yii\helpers\Url::isRelative($returnUrl))
+            if (Yii::$app->request->post('action') == 'save')
             {
-                return $this->redirect($returnUrl);
+                Yii::$app->session->addFlash('success', Yii::t('backend', 'Data saved.'));
             }
+            else
+            {
+                return $this->redirectBack();
+            }
+        }
 
-            return $this->redirect([$this->defaultAction]);
-        }
-        else
-        {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
-        }
+        return $this->render('update', [
+            'model' => $model,
+        ]);
     }
 
     /**
@@ -126,7 +128,7 @@ class UserController extends \backend\components\BackendController
 
         if ($deleted == FALSE)
         {
-            throw new \yii\web\HttpException(500, 'User not deleted.');
+            throw new HttpException(500, 'User not deleted.');
         }
 
         return $this->redirect([$this->defaultAction]);
@@ -141,11 +143,14 @@ class UserController extends \backend\components\BackendController
      */
     protected function findModel($id, $class = Model::class)
     {
-        if (($model = $class::find()->where(['id' => $id])->one()) !== null) {
+        $model = $class::find()->where(['id' => $id])->one();
+
+        if ($model)
+        {
             return $model;
-        } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
         }
+
+        throw new NotFoundHttpException('The requested page does not exist.');
     }
     
 }

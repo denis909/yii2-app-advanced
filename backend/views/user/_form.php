@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\web\JsExpression;
-use trntv\filekit\widget\Upload;
+use denis909\storage\widgets\StorageUpload;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\User */
@@ -47,21 +47,22 @@ echo $form->field($model, 'status')->dropDownList($model->statusList, ['prompt' 
 
 echo $form->field($model, 'password')->passwordInput(['maxlength' => true]);
 
-echo $form->field($model, 'avatarFile')->widget(Upload::class, [
+echo $form->field($model, 'avatarFile')->widget(StorageUpload::class, [
     'url' => ['upload-avatar'],
-    'sortable' => true,
+    'sortable' => false,
     'maxFileSize' => $model::AVATAR_MAX_SIZE,
     'acceptFileTypes' => new JsExpression('/(\.|\/)(' . implode('|', $model::AVATAR_FILE_TYPES) . ')$/i'),
-    'maxNumberOfFiles' => 1
+    'maxNumberOfFiles' => 1,
+    'multiple' => false
 ]);
 
 ?>
 
 <div class="form-group">
 
-    <?= Html::submitButton($model->isNewRecord ? Yii::t('backend', 'Create') : Yii::t('backend', 'Update'), [
-        'class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary'
-    ]) ?>
+    <?php echo $backendTheme->saveButton(Yii::t('backend', 'Save'));?>
+
+    <?php echo $backendTheme->submitButton($model->isNewRecord ? Yii::t('backend', 'Create') : Yii::t('backend', 'Update'));?>
 
 </div>
 
