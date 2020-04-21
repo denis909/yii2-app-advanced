@@ -8,6 +8,8 @@ $user = Yii::$app->{$userComponent}->identity;
 
 $theme = Yii::$app->backendTheme;
 
+backend\assets\AppAsset::register($this);
+
 echo $theme->mainLayout([
     'copyright' => false,
     'optionsMenu' => Yii::$app->params['backendOptionsMenu'] ?? [],
