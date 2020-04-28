@@ -60,9 +60,9 @@ echo $form->field($model, 'avatarFile')->widget(StorageUpload::class, [
 
 <div class="form-group">
 
-    <?php echo $backendTheme->saveButton(Yii::t('backend', 'Save'));?>
-
     <?php echo $backendTheme->submitButton($model->isNewRecord ? Yii::t('backend', 'Create') : Yii::t('backend', 'Update'));?>
+
+    <?php echo $backendTheme->saveButton(Yii::t('backend', 'Save'));?>
 
 </div>
 

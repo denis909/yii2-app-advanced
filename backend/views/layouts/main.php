@@ -21,6 +21,6 @@ echo $theme->mainLayout([
     'errorMessages' => Yii::$app->session->getFlash('error'),
     'actionMenu' => ArrayHelper::getValue($this->params, 'actionMenu', []),
     'mainMenu' => ArrayHelper::getValue(Yii::$app->params, 'backendMenu'),
-    'enableCard' => ArrayHelper::getValue($this->params, 'enableCard'),
-    'cardTitle' => ArrayHelper::getValue($this->params, 'cardTitle'),        
+    'enableCard' => ArrayHelper::getValue($this->params, 'enableCard', true),
+    'cardTitle' => ArrayHelper::getValue($this->params, 'cardTitle')  
 ]);

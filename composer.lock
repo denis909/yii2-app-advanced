@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d7cc525b472bb095ceea61b0799e58d1",
+    "content-hash": "8e8078e47b65e58587a87eebc81d4ee2",
     "packages": [
         {
             "name": "bower-asset/glyphicons",
@@ -26,7 +26,7 @@
             "version": "3.3.11",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobinHerbots/Inputmask.git",
+                "url": "git@github.com:RobinHerbots/Inputmask.git",
                 "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "dist": {
@@ -623,17 +623,43 @@
             "time": "2020-04-19T09:03:41+00:00"
         },
         {
+            "name": "denis909/yii2-nullable-behavior",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-nullable-behavior.git",
+                "reference": "9e43a4b0fa550039b7597ec25d4e299e0bf6cfa8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-nullable-behavior/zipball/9e43a4b0fa550039b7597ec25d4e299e0bf6cfa8",
+                "reference": "9e43a4b0fa550039b7597ec25d4e299e0bf6cfa8",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\yii\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2020-04-28T15:30:51+00:00"
+        },
+        {
             "name": "denis909/yii2-storage",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-storage.git",
-                "reference": "ebf611df881b3fce2b67f21481814756bd7b8f45"
+                "reference": "3450fe8680e836c7bf1b0c2fc0c91b42f328ffad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-storage/zipball/ebf611df881b3fce2b67f21481814756bd7b8f45",
-                "reference": "ebf611df881b3fce2b67f21481814756bd7b8f45",
+                "url": "https://api.github.com/repos/denis909/yii2-storage/zipball/3450fe8680e836c7bf1b0c2fc0c91b42f328ffad",
+                "reference": "3450fe8680e836c7bf1b0c2fc0c91b42f328ffad",
                 "shasum": ""
             },
             "require": {
@@ -656,7 +682,7 @@
                     "email": "mail@denis909.spb.ru"
                 }
             ],
-            "time": "2020-04-21T19:49:59+00:00"
+            "time": "2020-04-23T19:37:39+00:00"
         },
         {
             "name": "denis909/yii2-theme",
@@ -664,12 +690,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-theme.git",
-                "reference": "28d738138bcf1ea32ba10abf2c57e9e630e5ddfa"
+                "reference": "ccccf932fc4ae56a6043a399cbb2a849ab715ad6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-theme/zipball/28d738138bcf1ea32ba10abf2c57e9e630e5ddfa",
-                "reference": "28d738138bcf1ea32ba10abf2c57e9e630e5ddfa",
+                "url": "https://api.github.com/repos/denis909/yii2-theme/zipball/ccccf932fc4ae56a6043a399cbb2a849ab715ad6",
+                "reference": "ccccf932fc4ae56a6043a399cbb2a849ab715ad6",
                 "shasum": ""
             },
             "require": {
@@ -687,7 +713,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-04-21T20:03:30+00:00"
+            "time": "2020-04-28T21:00:36+00:00"
         },
         {
             "name": "denis909/yii2-theme-bootstrap4",
@@ -730,12 +756,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-theme-sbadmin2.git",
-                "reference": "d0a91fd34da02947d96f515ec100320904a72ccb"
+                "reference": "3ab3bd17aba572e46a029244a1f4c8e0611b6a17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-theme-sbadmin2/zipball/d0a91fd34da02947d96f515ec100320904a72ccb",
-                "reference": "d0a91fd34da02947d96f515ec100320904a72ccb",
+                "url": "https://api.github.com/repos/denis909/yii2-theme-sbadmin2/zipball/3ab3bd17aba572e46a029244a1f4c8e0611b6a17",
+                "reference": "3ab3bd17aba572e46a029244a1f4c8e0611b6a17",
                 "shasum": ""
             },
             "require": {
@@ -754,7 +780,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2020-04-19T14:15:41+00:00"
+            "time": "2020-04-28T19:52:45+00:00"
         },
         {
             "name": "denis909/yii2-typecast-behavior",
@@ -2788,16 +2814,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v3.4.39",
+            "version": "v3.4.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "a8833c56f6a4abcf17a319d830d71fdb0ba93675"
+                "reference": "eded33daef1147be7ff1249706be9a49fe2c7a44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/a8833c56f6a4abcf17a319d830d71fdb0ba93675",
-                "reference": "a8833c56f6a4abcf17a319d830d71fdb0ba93675",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/eded33daef1147be7ff1249706be9a49fe2c7a44",
+                "reference": "eded33daef1147be7ff1249706be9a49fe2c7a44",
                 "shasum": ""
             },
             "require": {
@@ -2838,7 +2864,21 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-23T12:14:52+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-04-18T20:23:17+00:00"
         },
         {
             "name": "symfony/polyfill-iconv",
@@ -4444,23 +4484,20 @@
         },
         {
             "name": "phpdocumentor/reflection-common",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-                "reference": "63a995caa1ca9e5590304cd845c15ad6d482a62a"
+                "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/63a995caa1ca9e5590304cd845c15ad6d482a62a",
-                "reference": "63a995caa1ca9e5590304cd845c15ad6d482a62a",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
+                "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~6"
             },
             "type": "library",
             "extra": {
@@ -4492,7 +4529,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2018-08-07T13:53:10+00:00"
+            "time": "2020-04-27T09:25:28+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -4948,16 +4985,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "8.5.3",
+            "version": "8.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "67750516bc02f300e2742fed2f50177f8f37bedf"
+                "reference": "8474e22d7d642f665084ba5ec780626cbd1efd23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/67750516bc02f300e2742fed2f50177f8f37bedf",
-                "reference": "67750516bc02f300e2742fed2f50177f8f37bedf",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/8474e22d7d642f665084ba5ec780626cbd1efd23",
+                "reference": "8474e22d7d642f665084ba5ec780626cbd1efd23",
                 "shasum": ""
             },
             "require": {
@@ -5027,7 +5064,17 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2020-03-31T08:52:04+00:00"
+            "funding": [
+                {
+                    "url": "https://phpunit.de/donate.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/sebastianbergmann",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-04-23T04:39:42+00:00"
         },
         {
             "name": "psr/container",
@@ -5798,7 +5845,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v5.0.7",
+            "version": "v5.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -5870,11 +5917,25 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-03-30T11:42:42+00:00"
         },
         {
             "name": "symfony/css-selector",
-            "version": "v5.0.7",
+            "version": "v5.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -5941,7 +6002,7 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v4.4.7",
+            "version": "v4.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
@@ -6016,7 +6077,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v5.0.7",
+            "version": "v5.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -6158,7 +6219,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v5.0.7",
+            "version": "v5.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -6423,16 +6484,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.0.7",
+            "version": "v5.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "ad5e9c83ade5bbb3a96a3f30588a0622708caefd"
+                "reference": "482fb4e710e5af3e0e78015f19aa716ad953392f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/ad5e9c83ade5bbb3a96a3f30588a0622708caefd",
-                "reference": "ad5e9c83ade5bbb3a96a3f30588a0622708caefd",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/482fb4e710e5af3e0e78015f19aa716ad953392f",
+                "reference": "482fb4e710e5af3e0e78015f19aa716ad953392f",
                 "shasum": ""
             },
             "require": {
@@ -6478,7 +6539,21 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-30T11:42:42+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-04-28T17:58:55+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -6727,7 +6802,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "denis909/yii2-nullable-behavior": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
