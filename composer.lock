@@ -654,12 +654,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-storage.git",
-                "reference": "3450fe8680e836c7bf1b0c2fc0c91b42f328ffad"
+                "reference": "8b2fde6ec6bb0d7ffc0bfa890c3452fb05775bb2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-storage/zipball/3450fe8680e836c7bf1b0c2fc0c91b42f328ffad",
-                "reference": "3450fe8680e836c7bf1b0c2fc0c91b42f328ffad",
+                "url": "https://api.github.com/repos/denis909/yii2-storage/zipball/8b2fde6ec6bb0d7ffc0bfa890c3452fb05775bb2",
+                "reference": "8b2fde6ec6bb0d7ffc0bfa890c3452fb05775bb2",
                 "shasum": ""
             },
             "require": {
@@ -682,7 +682,7 @@
                     "email": "mail@denis909.spb.ru"
                 }
             ],
-            "time": "2020-04-23T19:37:39+00:00"
+            "time": "2020-04-29T20:21:19+00:00"
         },
         {
             "name": "denis909/yii2-theme",
