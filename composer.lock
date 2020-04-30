@@ -532,12 +532,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-glide.git",
-                "reference": "64971b6fb8a7339854278350f5295f389215ffdd"
+                "reference": "4fc30942c85743f305ad1f543834685095b92257"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-glide/zipball/64971b6fb8a7339854278350f5295f389215ffdd",
-                "reference": "64971b6fb8a7339854278350f5295f389215ffdd",
+                "url": "https://api.github.com/repos/denis909/yii2-glide/zipball/4fc30942c85743f305ad1f543834685095b92257",
+                "reference": "4fc30942c85743f305ad1f543834685095b92257",
                 "shasum": ""
             },
             "require": {
@@ -559,7 +559,7 @@
                     "email": "mail@denis909.spb.ru"
                 }
             ],
-            "time": "2020-04-21T19:21:03+00:00"
+            "time": "2020-04-30T16:51:48+00:00"
         },
         {
             "name": "denis909/yii2-glyphicons",
