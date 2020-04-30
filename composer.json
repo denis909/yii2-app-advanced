@@ -28,7 +28,8 @@
         "denis909/yii2-attribute-changed-behavior": "*",
         "denis909/yii2-storage": "*",
         "denis909/yii2-glide": "*",
-        "denis909/yii2-nullable-behavior": "dev-master"
+        "denis909/yii2-nullable-behavior": "dev-master",
+        "denis909/yii2-censoring": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

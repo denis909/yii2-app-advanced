@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e8078e47b65e58587a87eebc81d4ee2",
+    "content-hash": "7c4eb6293b369ceb764031857b04a063",
     "packages": [
         {
             "name": "bower-asset/glyphicons",
@@ -434,6 +434,35 @@
                 "MIT"
             ],
             "time": "2020-04-30T07:53:23+00:00"
+        },
+        {
+            "name": "denis909/yii2-censoring",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-censoring.git",
+                "reference": "1aa56e783de7f0a3e8ef4648e5bf41a93f7ea58b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-censoring/zipball/1aa56e783de7f0a3e8ef4648e5bf41a93f7ea58b",
+                "reference": "1aa56e783de7f0a3e8ef4648e5bf41a93f7ea58b",
+                "shasum": ""
+            },
+            "require": {
+                "denis909/cascade-filesystem": "*"
+            },
+            "type": "module",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\censoring\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2020-04-30T20:30:28+00:00"
         },
         {
             "name": "denis909/yii2-datetime-formatter-behavior",
@@ -6830,7 +6859,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "denis909/yii2-nullable-behavior": 20
+        "denis909/yii2-nullable-behavior": 20,
+        "denis909/yii2-censoring": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
