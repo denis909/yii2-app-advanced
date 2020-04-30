@@ -410,6 +410,32 @@
             "time": "2019-12-26T10:48:54+00:00"
         },
         {
+            "name": "denis909/yii2-bootstrap4-carousel",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-bootstrap4-carousel.git",
+                "reference": "9c812d1c21322c6f0987a0f8a64f7ef237e85184"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-bootstrap4-carousel/zipball/9c812d1c21322c6f0987a0f8a64f7ef237e85184",
+                "reference": "9c812d1c21322c6f0987a0f8a64f7ef237e85184",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\yii\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2020-04-30T07:53:23+00:00"
+        },
+        {
             "name": "denis909/yii2-datetime-formatter-behavior",
             "version": "dev-master",
             "source": {
@@ -686,7 +712,7 @@
         },
         {
             "name": "denis909/yii2-theme",
-            "version": "dev-master",
+            "version": "0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-theme.git",
@@ -721,16 +747,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-theme-bootstrap4.git",
-                "reference": "8f425bc8cbe5e55b62c70b7a1a0ab789b6a5cb8f"
+                "reference": "0548f4bb7c27deffa519887e0b12b6c0f3168a2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-theme-bootstrap4/zipball/8f425bc8cbe5e55b62c70b7a1a0ab789b6a5cb8f",
-                "reference": "8f425bc8cbe5e55b62c70b7a1a0ab789b6a5cb8f",
+                "url": "https://api.github.com/repos/denis909/yii2-theme-bootstrap4/zipball/0548f4bb7c27deffa519887e0b12b6c0f3168a2b",
+                "reference": "0548f4bb7c27deffa519887e0b12b6c0f3168a2b",
                 "shasum": ""
             },
             "require": {
-                "denis909/yii2-theme": "dev-master",
+                "denis909/yii2-bootstrap4-carousel": "*",
+                "denis909/yii2-theme": "*",
                 "kartik-v/yii2-date-range": "^1.7",
                 "kartik-v/yii2-tabs-x": "^1.2",
                 "kartik-v/yii2-widget-datepicker": "^1.4",
@@ -748,7 +775,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2019-12-12T14:21:18+00:00"
+            "time": "2020-04-30T07:58:37+00:00"
         },
         {
             "name": "denis909/yii2-theme-sbadmin2",
