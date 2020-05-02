@@ -7,11 +7,11 @@ use denis909\storage\widgets\StorageUpload;
 /* @var $model app\models\User */
 /* @var $form yii\widgets\ActiveForm */
 
-$backendTheme = Yii::$app->backendTheme;
+$theme = Yii::$app->backendTheme;
 
 ?>
 
-<?php $form = $backendTheme->beginActiveForm([
+<?php $form = $theme->beginActiveForm([
 	'enableClientScript' => false,
 	'enableClientValidation' => false,
 	'enableAjaxValidation' => false
@@ -58,10 +58,10 @@ echo $form->field($model, 'avatarFile')->widget(StorageUpload::class, [
 
 <div class="form-group">
 
-    <?php echo $backendTheme->submitButton($model->isNewRecord ? Yii::t('backend', 'Create') : Yii::t('backend', 'Update'));?>
+<?php echo $theme->submitButton($model->isNewRecord ? Yii::t('backend', 'Create') : Yii::t('backend', 'Update'));?>
 
-    <?php echo $backendTheme->saveButton(Yii::t('backend', 'Save'));?>
+<?php echo $theme->saveButton(Yii::t('backend', 'Save'));?>
 
 </div>
 
-<?php $backendTheme->endActiveForm();?>
+<?php $theme->endActiveForm();?>
