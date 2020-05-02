@@ -10,3 +10,6 @@ require dirname(dirname(__DIR__)) . '/vendor/denis909/yii2-backend/config/bootst
 require dirname(dirname(__DIR__)) . '/vendor/denis909/yii2-glide/config/bootstrap.php';
 require dirname(dirname(__DIR__)) . '/vendor/denis909/yii2-storage/config/bootstrap.php';
 require dirname(dirname(__DIR__)) . '/modules/yii2-shop/config/bootstrap.php';
+
+Yii::setAlias('@denis909/themes/porto17', dirname(dirname(__DIR__)) . '/modules/yii2-theme-porto17');
+Yii::setAlias('@denis909/themes/tabler', dirname(dirname(__DIR__)) . '/modules/yii2-theme-tabler');

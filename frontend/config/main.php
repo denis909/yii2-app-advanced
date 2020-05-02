@@ -16,6 +16,9 @@ $return = [
     'language' => 'ru',
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+        'theme' => [
+            'class' => 'denis909\themes\tabler\FrontendTheme'
+        ],
         'request' => [
             'csrfParam' => '_csrf-frontend'
         ],
