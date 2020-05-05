@@ -678,12 +678,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-menu.git",
-                "reference": "2dc1d4b85d15660f9d9cfe5b101b07c68de85e2e"
+                "reference": "20165deda0a4766a8d954dcf17b343986ec1a10b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-menu/zipball/2dc1d4b85d15660f9d9cfe5b101b07c68de85e2e",
-                "reference": "2dc1d4b85d15660f9d9cfe5b101b07c68de85e2e",
+                "url": "https://api.github.com/repos/denis909/yii2-menu/zipball/20165deda0a4766a8d954dcf17b343986ec1a10b",
+                "reference": "20165deda0a4766a8d954dcf17b343986ec1a10b",
                 "shasum": ""
             },
             "type": "library",
@@ -696,7 +696,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-01-25T15:29:01+00:00"
+            "time": "2020-05-05T20:37:51+00:00"
         },
         {
             "name": "denis909/yii2-model",

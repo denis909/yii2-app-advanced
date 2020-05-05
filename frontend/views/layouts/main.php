@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\ArrayHelper;
+use denis909\shop\models\ShopCategory;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -19,10 +20,12 @@ foreach(Yii::$app->cart->getPositions() as $shopItem)
     ];
 }
 
+$mainMenu = ShopCategory::getCategoryMenu(ArrayHelper::getValue($this->params, 'shopCategoryMenu', []));
+
 echo $theme->mainLayout([
     'content' => $content,
     'breadcrumbs' => ArrayHelper::getValue($this->params, 'breadcrumbs', []),
-    'mainMenu' => ArrayHelper::getValue(Yii::$app->params, 'mainMenu', []),
+    'mainMenu' => $mainMenu,
     'cart' => $cartItems,
     'cartOptions' => [
         'emptyMessage' => Yii::t('shop', 'Cart is empty.'),
