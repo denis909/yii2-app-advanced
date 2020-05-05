@@ -7,16 +7,28 @@ use yii\helpers\ArrayHelper;
 
 $theme = Yii::$app->theme;
 
+$cartItems = [];
+
+foreach(Yii::$app->cart->getPositions() as $shopItem)
+{
+    $cartItems[] = [
+        'title' => $shopItem->name,
+        'url' => $shopItem->frontendUrl,
+        'description' => $shopItem->priceAsCurrency,
+        'image' => $shopItem->imageThumb(32, 32)
+    ];
+}
+
 echo $theme->mainLayout([
     'content' => $content,
     'breadcrumbs' => ArrayHelper::getValue($this->params, 'breadcrumbs', []),
     'mainMenu' => ArrayHelper::getValue(Yii::$app->params, 'mainMenu', []),
-    'cart' => Yii::$app->shop->getCartItems(),
+    'cart' => $cartItems,
     'cartOptions' => [
-        'emptyMessage' => Yii::t('app', 'Cart is empty.'),
+        'emptyMessage' => Yii::t('shop', 'Cart is empty.'),
         'menu' => [
             [
-                'label' => Yii::t('app', 'View Cart'), 
+                'label' => Yii::t('shop', 'View Cart'), 
                 'url' => ['/shop/cart']
             ]
         ]

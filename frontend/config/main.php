@@ -16,6 +16,9 @@ $return = [
     'language' => 'ru',
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+        'frontendUrlManager' => function() {
+            return Yii::$app->urlManager;
+        },
         'theme' => [
             'class' => 'denis909\themes\tabler\FrontendTheme'
         ],
@@ -48,7 +51,7 @@ $return = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-            ],
+            ]
         ]
     ],
     'params' => $params
