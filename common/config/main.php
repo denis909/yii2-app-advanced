@@ -17,8 +17,12 @@ $return = [
         ],
         'i18n' => [
             'translations' => [ 
+                'app*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@common/messages'
+                ],
                 '*' => [
-                    'class' => yii\i18n\PhpMessageSource::class,
+                    'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@common/messages'
                 ]
             ]

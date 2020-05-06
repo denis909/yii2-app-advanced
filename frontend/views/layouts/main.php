@@ -15,7 +15,7 @@ foreach(Yii::$app->cart->getPositions() as $shopItem)
     $cartItems[] = [
         'title' => $shopItem->name,
         'url' => $shopItem->frontendUrl,
-        'description' => $shopItem->priceAsCurrency,
+        'description' => $shopItem->priceAsCurrency . ' x ' . $shopItem->getQuantity(),
         'image' => $shopItem->imageThumb(32, 32)
     ];
 }
@@ -38,4 +38,7 @@ echo $theme->mainLayout([
     ],
     'actionMenu' => ArrayHelper::getValue($this->params, 'actionMenu', []),
     'userMenu' => !Yii::$app->user->isGuest ? ArrayHelper::getValue(Yii::$app->params, 'memberMenu', []) : [],
+    'cardTitle' => ArrayHelper::getValue($this->params, 'cardTitle', $this->title),
+    'enableCard' => ArrayHelper::getValue($this->params, 'enableCard', true),
+    'footerMenu' => ArrayHelper::getValue(Yii::$app->params, 'footerMenu', [])
 ]);

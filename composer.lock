@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c9468293534ab8149d206c7198d133a",
+    "content-hash": "7317a3394f960ca047eb6a50c4ba33db",
     "packages": [
         {
             "name": "bower-asset/glyphicons",
@@ -409,6 +409,42 @@
                 "MIT"
             ],
             "time": "2019-12-26T10:48:54+00:00"
+        },
+        {
+            "name": "denis909/yii2-bootstrap4",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-bootstrap4.git",
+                "reference": "ff3c8a2cdf97c9f926c3fe580c0296a3d9e25857"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-bootstrap4/zipball/ff3c8a2cdf97c9f926c3fe580c0296a3d9e25857",
+                "reference": "ff3c8a2cdf97c9f926c3fe580c0296a3d9e25857",
+                "shasum": ""
+            },
+            "require": {
+                "denis909/yii2-bootstrap4-carousel": "*",
+                "denis909/yii2-theme": "*",
+                "kartik-v/yii2-date-range": "^1.7",
+                "kartik-v/yii2-tabs-x": "^1.2",
+                "kartik-v/yii2-widget-datepicker": "^1.4",
+                "kartik-v/yii2-widget-datetimepicker": "^1.4",
+                "kartik-v/yii2-widget-select2": "^2.1",
+                "kartik-v/yii2-widget-timepicker": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\bootstrap4\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2020-05-06T10:55:36+00:00"
         },
         {
             "name": "denis909/yii2-bootstrap4-carousel",
@@ -824,61 +860,24 @@
             "time": "2020-05-02T11:07:31+00:00"
         },
         {
-            "name": "denis909/yii2-theme-bootstrap4",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/denis909/yii2-theme-bootstrap4.git",
-                "reference": "4485905999d71466ef4a6eebce53fa67e8e21bad"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-theme-bootstrap4/zipball/4485905999d71466ef4a6eebce53fa67e8e21bad",
-                "reference": "4485905999d71466ef4a6eebce53fa67e8e21bad",
-                "shasum": ""
-            },
-            "require": {
-                "denis909/yii2-bootstrap4-carousel": "*",
-                "denis909/yii2-theme": "*",
-                "kartik-v/yii2-date-range": "^1.7",
-                "kartik-v/yii2-tabs-x": "^1.2",
-                "kartik-v/yii2-widget-datepicker": "^1.4",
-                "kartik-v/yii2-widget-datetimepicker": "^1.4",
-                "kartik-v/yii2-widget-select2": "^2.1",
-                "kartik-v/yii2-widget-timepicker": "^1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "denis909\\bootstrap4\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "time": "2020-05-02T09:26:27+00:00"
-        },
-        {
             "name": "denis909/yii2-theme-sbadmin2",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-theme-sbadmin2.git",
-                "reference": "27e6902bf22a985a4cf147d0e11fade309e44692"
+                "reference": "2ff1f939ce679688a9b1540910584fcf37e4c185"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-theme-sbadmin2/zipball/27e6902bf22a985a4cf147d0e11fade309e44692",
-                "reference": "27e6902bf22a985a4cf147d0e11fade309e44692",
+                "url": "https://api.github.com/repos/denis909/yii2-theme-sbadmin2/zipball/2ff1f939ce679688a9b1540910584fcf37e4c185",
+                "reference": "2ff1f939ce679688a9b1540910584fcf37e4c185",
                 "shasum": ""
             },
             "require": {
+                "denis909/yii2-bootstrap4": "*",
                 "denis909/yii2-fake-bootstrap4": "*",
                 "denis909/yii2-glyphicons": "*",
                 "denis909/yii2-menu": "*",
-                "denis909/yii2-theme": "*",
-                "denis909/yii2-theme-bootstrap4": "*",
                 "npm-asset/startbootstrap-sb-admin-2": "^4.0",
                 "yiisoft/yii2-bootstrap4": "^2.0"
             },
@@ -889,7 +888,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2020-05-04T16:20:22+00:00"
+            "time": "2020-05-06T09:46:49+00:00"
         },
         {
             "name": "denis909/yii2-typecast-behavior",
@@ -7577,7 +7576,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "denis909/yii2-theme": 20,
-        "denis909/yii2-frontend": 20
+        "denis909/yii2-frontend": 20,
+        "denis909/yii2-bootstrap4": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
