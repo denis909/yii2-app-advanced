@@ -595,12 +595,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-frontend.git",
-                "reference": "b9b7d57cc0d7d9d7a1d3e9a3b5545095a6771ad9"
+                "reference": "0eb1fc8e6cbda89a1d06051565a55b47f072ebe3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-frontend/zipball/b9b7d57cc0d7d9d7a1d3e9a3b5545095a6771ad9",
-                "reference": "b9b7d57cc0d7d9d7a1d3e9a3b5545095a6771ad9",
+                "url": "https://api.github.com/repos/denis909/yii2-frontend/zipball/0eb1fc8e6cbda89a1d06051565a55b47f072ebe3",
+                "reference": "0eb1fc8e6cbda89a1d06051565a55b47f072ebe3",
                 "shasum": ""
             },
             "type": "library",
@@ -613,7 +613,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-05-21T19:00:29+00:00"
+            "time": "2020-05-21T19:10:50+00:00"
         },
         {
             "name": "denis909/yii2-glide",
