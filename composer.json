@@ -29,7 +29,6 @@
         "denis909/yii2-storage": "*",
         "denis909/yii2-glide": "*",
         "denis909/yii2-nullable-behavior": "*",
-        "denis909/yii2-censoring": "*",
         "denis909/yii2-theme": "dev-master",
         "yiisoft/yii2-bootstrap4": "^2.0",
         "npm-asset/tabler-ui": "^0.0.34",
