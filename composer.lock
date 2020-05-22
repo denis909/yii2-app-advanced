@@ -595,12 +595,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-frontend.git",
-                "reference": "0eb1fc8e6cbda89a1d06051565a55b47f072ebe3"
+                "reference": "c96432bba87764a019f20b827a5089826bbc3e85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-frontend/zipball/0eb1fc8e6cbda89a1d06051565a55b47f072ebe3",
-                "reference": "0eb1fc8e6cbda89a1d06051565a55b47f072ebe3",
+                "url": "https://api.github.com/repos/denis909/yii2-frontend/zipball/c96432bba87764a019f20b827a5089826bbc3e85",
+                "reference": "c96432bba87764a019f20b827a5089826bbc3e85",
                 "shasum": ""
             },
             "type": "library",
@@ -613,7 +613,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-05-21T19:10:50+00:00"
+            "time": "2020-05-22T21:20:32+00:00"
         },
         {
             "name": "denis909/yii2-glide",
@@ -2848,10 +2848,10 @@
         },
         {
             "name": "npm-asset/moment",
-            "version": "2.25.3",
+            "version": "2.26.0",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/moment/-/moment-2.25.3.tgz"
+                "url": "https://registry.npmjs.org/moment/-/moment-2.26.0.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -5084,16 +5084,16 @@
         },
         {
             "name": "opis/closure",
-            "version": "3.5.1",
+            "version": "3.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opis/closure.git",
-                "reference": "93ebc5712cdad8d5f489b500c59d122df2e53969"
+                "reference": "2e3299cea6f485ca64d19c540f46d7896c512ace"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opis/closure/zipball/93ebc5712cdad8d5f489b500c59d122df2e53969",
-                "reference": "93ebc5712cdad8d5f489b500c59d122df2e53969",
+                "url": "https://api.github.com/repos/opis/closure/zipball/2e3299cea6f485ca64d19c540f46d7896c512ace",
+                "reference": "2e3299cea6f485ca64d19c540f46d7896c512ace",
                 "shasum": ""
             },
             "require": {
@@ -5141,7 +5141,7 @@
                 "serialization",
                 "serialize"
             ],
-            "time": "2019-11-29T22:36:02+00:00"
+            "time": "2020-05-21T20:09:36+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -5748,16 +5748,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "8.5.4",
+            "version": "8.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "8474e22d7d642f665084ba5ec780626cbd1efd23"
+                "reference": "63dda3b212a0025d380a745f91bdb4d8c985adb7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/8474e22d7d642f665084ba5ec780626cbd1efd23",
-                "reference": "8474e22d7d642f665084ba5ec780626cbd1efd23",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/63dda3b212a0025d380a745f91bdb4d8c985adb7",
+                "reference": "63dda3b212a0025d380a745f91bdb4d8c985adb7",
                 "shasum": ""
             },
             "require": {
@@ -5837,7 +5837,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-04-23T04:39:42+00:00"
+            "time": "2020-05-22T13:51:52+00:00"
         },
         {
             "name": "psr/container",
