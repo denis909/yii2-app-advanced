@@ -2,13 +2,13 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Signup';
+$this->title = 'Регистрация';
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
 <div class="site-signup">
 
-<p>Please fill out the following fields to signup:</p>
+<p>Пожалуйста, заполните все поля формы чтобы зарегистрироваться:</p>
 
 <?= frontend\widgets\Signup::widget(['model' => $model]);?>
 

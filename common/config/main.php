@@ -9,6 +9,12 @@ $return = [
     ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
+        'user' => [
+            'class' => 'frontend\components\FrontendWebUser'
+        ],
+        'backendUser' => [
+            'class' => 'backend\components\BackendWebUser'
+        ],
         'formatter' => [
             'timeZone' => 'Europe/Moscow'
         ],

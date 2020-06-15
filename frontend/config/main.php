@@ -19,17 +19,8 @@ $return = [
         'frontendUrlManager' => function() {
             return Yii::$app->urlManager;
         },
-        'theme' => [
-            'class' => 'denis909\themes\tabler\FrontendTheme'
-        ],
         'request' => [
             'csrfParam' => '_csrf-frontend'
-        ],
-        'user' => [
-            'class' => 'frontend\components\FrontendWebUser'
-        ],
-        'backendUser' => [
-            'class' => 'backend\components\BackendWebUser'
         ],
         'session' => [
             // this is the name of the session cookie used for login on the frontend
