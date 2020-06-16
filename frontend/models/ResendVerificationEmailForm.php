@@ -9,11 +9,11 @@ use yii\base\Model;
 
 class ResendVerificationEmailForm extends Model
 {
+
     /**
      * @var string
      */
     public $email;
-
 
     /**
      * {@inheritdoc}
@@ -27,7 +27,7 @@ class ResendVerificationEmailForm extends Model
             ['email', 'exist',
                 'targetClass' => '\common\models\User',
                 'filter' => ['status' => User::STATUS_INACTIVE],
-                'message' => 'There is no user with this email address.'
+                'message' => Yii::t('messages', 'There is no inactive user with this email address.')
             ],
         ];
     }

@@ -10,11 +10,12 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\LoginForm;
+use frontend\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\ProfileForm;
 
 /**
  * Site controller
@@ -29,7 +30,7 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::class,
-                'only' => ['logout', 'signup'],
+                'only' => ['logout', 'signup', 'profile'],
                 'rules' => [
                     [
                         'actions' => ['signup'],
@@ -37,7 +38,7 @@ class SiteController extends Controller
                         'roles' => ['?']
                     ],
                     [
-                        'actions' => ['logout'],
+                        'actions' => ['logout', 'profile'],
                         'allow' => true,
                         'roles' => ['@']
                     ]
@@ -169,15 +170,27 @@ class SiteController extends Controller
     {
         $model = new SignupForm;
         
-        if ($model->load(Yii::$app->request->post()) && $model->signup())
+        if ($model->load(Yii::$app->request->post()) && $model->save())
         {
-            Yii::$app->session->setFlash(
-                'success', 
-                Yii::t('messages', 'Thank you for registration. Please check your inbox for verification email.')
-            );
+            if ($model->sendEmail())
+            {
+                Yii::$app->session->setFlash(
+                    'success', 
+                    Yii::t('messages', 'Thank you for registration. Please check your inbox for verification email.')
+                );
+            }
+            else
+            {            
+                Yii::$app->session->setFlash(
+                    'error', 
+                    Yii::t('messages', 'Sorry, we are unable to verify your account with provided token.')
+                );
+            }
 
             return $this->goHome();
         }
+
+        $model->password = '';
 
         return $this->render('signup', [
             'model' => $model
@@ -225,16 +238,19 @@ class SiteController extends Controller
      */
     public function actionResetPassword($token)
     {
-        try 
+        if (empty($token) || !is_string($token))
         {
-            $model = new ResetPasswordForm($token);
-        } 
-        catch (InvalidArgumentException $e)
-        {
-            throw new BadRequestHttpException($e->getMessage());
+            throw new InvalidArgumentException(Yii::t('messages', 'Password reset token cannot be blank.'));
         }
 
-        if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->resetPassword())
+        $model = ResetPasswordForm::findByPasswordResetToken($token);
+
+        if (!$model)
+        {
+            throw new BadRequestHttpException(Yii::t('messages', 'Wrong password reset token.'));
+        }
+
+        if ($model->load(Yii::$app->request->post()) && $model->save())
         {
             Yii::$app->session->setFlash(
                 'success', 
@@ -316,6 +332,30 @@ class SiteController extends Controller
         }
 
         return $this->render('resendVerificationEmail', [
+            'model' => $model
+        ]);
+    }
+
+    public function actionProfile()
+    {
+        $model = ProfileForm::findOne(Yii::$app->user->id);
+
+        if (!$model)
+        {
+            throw new Exception('User not found.');
+        }
+
+        if ($model->load(Yii::$app->request->post()) && $model->save())
+        {
+            Yii::$app->session->setFlash(
+                'success', 
+                Yii::t('messages', 'Profile saved.')
+            );
+        }
+
+        $model->password = '';
+
+        return $this->render('profile', [
             'model' => $model
         ]);
     }

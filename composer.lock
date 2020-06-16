@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a28662fdc2e81a6b33ddfcc763220b7",
+    "content-hash": "3cf6ffd9c40ec9a89cb8eeb92c6f4a14",
     "packages": [
         {
             "name": "bower-asset/glyphicons",
@@ -252,12 +252,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-backend.git",
-                "reference": "4555010554d7a4c3199512b3d866cfbbb145dd19"
+                "reference": "c9289f7c3049fc7ffd9963f0c53f4408eea3ac63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-backend/zipball/4555010554d7a4c3199512b3d866cfbbb145dd19",
-                "reference": "4555010554d7a4c3199512b3d866cfbbb145dd19",
+                "url": "https://api.github.com/repos/denis909/yii2-backend/zipball/c9289f7c3049fc7ffd9963f0c53f4408eea3ac63",
+                "reference": "c9289f7c3049fc7ffd9963f0c53f4408eea3ac63",
                 "shasum": ""
             },
             "require": {
@@ -275,7 +275,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-06-12T19:19:51+00:00"
+            "time": "2020-06-16T11:39:37+00:00"
         },
         {
             "name": "denis909/yii2-backend-theme",
@@ -428,6 +428,41 @@
             "time": "2020-06-09T09:05:58+00:00"
         },
         {
+            "name": "denis909/yii2-datetime-formatter-behavior",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-datetime-formatter-behavior.git",
+                "reference": "6274c612b4d6f550029424dd1fe9739c2c35ca0e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-datetime-formatter-behavior/zipball/6274c612b4d6f550029424dd1fe9739c2c35ca0e",
+                "reference": "6274c612b4d6f550029424dd1fe9739c2c35ca0e",
+                "shasum": ""
+            },
+            "require": {
+                "denis909/yii2-formatter-behavior": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\yii\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "denis909",
+                    "email": "mail@denis909.spb.ru"
+                }
+            ],
+            "time": "2020-04-19T08:49:02+00:00"
+        },
+        {
             "name": "denis909/yii2-fake-bootstrap4",
             "version": "1.0",
             "source": {
@@ -452,18 +487,53 @@
             "time": "2018-11-28T13:36:07+00:00"
         },
         {
+            "name": "denis909/yii2-formatter-behavior",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-formatter-behavior.git",
+                "reference": "7fa551af0a84e9837bb0d124d4a7d511e73980ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-formatter-behavior/zipball/7fa551af0a84e9837bb0d124d4a7d511e73980ba",
+                "reference": "7fa551af0a84e9837bb0d124d4a7d511e73980ba",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\yii\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "denis909",
+                    "email": "mail@denis909.spb.ru"
+                }
+            ],
+            "time": "2020-04-19T08:48:44+00:00"
+        },
+        {
             "name": "denis909/yii2-frontend",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-frontend.git",
-                "reference": "da0ea7b7caf7dde659261a3b6b4fce5bce753ad4"
+                "reference": "44bf66f05314ecc55ad776a802f852e500b24f5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-frontend/zipball/da0ea7b7caf7dde659261a3b6b4fce5bce753ad4",
-                "reference": "da0ea7b7caf7dde659261a3b6b4fce5bce753ad4",
+                "url": "https://api.github.com/repos/denis909/yii2-frontend/zipball/44bf66f05314ecc55ad776a802f852e500b24f5e",
+                "reference": "44bf66f05314ecc55ad776a802f852e500b24f5e",
                 "shasum": ""
+            },
+            "require": {
+                "denis909/cascade-filesystem": "*"
             },
             "type": "library",
             "autoload": {
@@ -475,7 +545,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-06-14T12:26:17+00:00"
+            "time": "2020-06-16T11:38:26+00:00"
         },
         {
             "name": "denis909/yii2-frontend-theme",
@@ -483,12 +553,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-frontend-theme.git",
-                "reference": "b0ebed22de1910df47b4e8a7756906631846bc4e"
+                "reference": "e4abf9e9ef5a88a932f48c2f1bc98cc16d48cdf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-frontend-theme/zipball/b0ebed22de1910df47b4e8a7756906631846bc4e",
-                "reference": "b0ebed22de1910df47b4e8a7756906631846bc4e",
+                "url": "https://api.github.com/repos/denis909/yii2-frontend-theme/zipball/e4abf9e9ef5a88a932f48c2f1bc98cc16d48cdf4",
+                "reference": "e4abf9e9ef5a88a932f48c2f1bc98cc16d48cdf4",
                 "shasum": ""
             },
             "type": "library",
@@ -501,7 +571,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-06-11T14:50:03+00:00"
+            "time": "2020-06-16T11:38:00+00:00"
         },
         {
             "name": "denis909/yii2-glyphicons",
@@ -619,12 +689,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-theme.git",
-                "reference": "b67deab197e084c4953b94173093d40c3f1505eb"
+                "reference": "3f39bcc20ddeafcf185dc2e37f5d6df48987ad04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-theme/zipball/b67deab197e084c4953b94173093d40c3f1505eb",
-                "reference": "b67deab197e084c4953b94173093d40c3f1505eb",
+                "url": "https://api.github.com/repos/denis909/yii2-theme/zipball/3f39bcc20ddeafcf185dc2e37f5d6df48987ad04",
+                "reference": "3f39bcc20ddeafcf185dc2e37f5d6df48987ad04",
                 "shasum": ""
             },
             "require": {
@@ -642,7 +712,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-06-15T15:56:48+00:00"
+            "time": "2020-06-16T11:36:58+00:00"
         },
         {
             "name": "denis909/yii2-theme-sbadmin2",
@@ -702,12 +772,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-theme-tabler.git",
-                "reference": "e66470431e647cd07f47048f45340650607ce2ec"
+                "reference": "775f9dcf92bcc195ea30c46370f3e7aebe39936a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-theme-tabler/zipball/e66470431e647cd07f47048f45340650607ce2ec",
-                "reference": "e66470431e647cd07f47048f45340650607ce2ec",
+                "url": "https://api.github.com/repos/denis909/yii2-theme-tabler/zipball/775f9dcf92bcc195ea30c46370f3e7aebe39936a",
+                "reference": "775f9dcf92bcc195ea30c46370f3e7aebe39936a",
                 "shasum": ""
             },
             "require": {
@@ -726,7 +796,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-06-13T08:16:51+00:00"
+            "time": "2020-06-16T10:42:19+00:00"
         },
         {
             "name": "denis909/yii2-theme-tabler-frontend",
@@ -2621,16 +2691,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.8.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6"
+                "reference": "9dc4f203e36f2b486149058bade43c851dd97451"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
-                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/9dc4f203e36f2b486149058bade43c851dd97451",
+                "reference": "9dc4f203e36f2b486149058bade43c851dd97451",
                 "shasum": ""
             },
             "require": {
@@ -2638,6 +2708,7 @@
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
+                "phpstan/phpstan": "<0.12.20",
                 "vimeo/psalm": "<3.9.1"
             },
             "require-dev": {
@@ -2665,7 +2736,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-04-18T12:12:48+00:00"
+            "time": "2020-06-16T10:16:42+00:00"
         },
         {
             "name": "yiisoft/yii2",

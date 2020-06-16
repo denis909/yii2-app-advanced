@@ -5,14 +5,14 @@ namespace frontend\models;
 use Yii;
 use yii\helpers\ArrayHelper;
 
-/**
- * Password reset form
- */
-class ResetPasswordForm extends \common\models\User
+class ProfileForm extends \common\models\User
 {
 
     public $password;
 
+    /**
+     * {@inheritdoc}
+     */
     public function scenarios()
     {
         return [
@@ -27,33 +27,33 @@ class ResetPasswordForm extends \common\models\User
      */
     public function rules()
     {
-        return ArrayHelper::merge($this->getPasswordRules('password'), [
-            ['password', 'required']
-        ]);
+        return ArrayHelper::merge(
+            parent::rules(), 
+            $this->getPasswordRules('password'),
+            [
+            ]
+        );
     }
 
     /**
-     * Resets password.
-     *
-     * @return bool if password was reset.
+     * {@inheritdoc}
      */
     public function beforeSave($insert)
     {
-        $this->setPassword($this->password);
-
-        $this->removePasswordResetToken();
-
-        if ($this->isStatusInactive)
+        if ($this->password)
         {
-            $this->setStatusActive();
+            $this->setPassword($this->password);
         }
 
         return parent::beforeSave($insert);
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function attributeLabels()
     {
-        return ArrayHelper::merge(parent::attributeLabels(), [
+        return array_merge(parent::attributeLabels(), [
             'password' => Yii::t('user', 'Password')
         ]);
     }

@@ -45,6 +45,33 @@ class User extends \denis909\yii\ActiveRecord implements IdentityInterface
     /**
      * {@inheritdoc}
      */
+    public function rules()
+    {
+        return [
+            [['created_at', 'updated_at'], 'number', 'integerOnly' => true, 'enableClientValidation' => false],
+            ['status', 'default', 'value' => self::STATUS_INACTIVE],
+            ['status', 'in', 'range' => array_keys(static::statusList())],
+            ['username', 'trim'],
+            ['username', 'unique', 'message' => Yii::t('messages', 'This username has already been taken.')],
+            ['username', 'string', 'min' => 2, 'max' => 255],
+            ['email', 'trim'],
+            ['email', 'email'],
+            ['email', 'string', 'max' => 255],
+            ['email', 'unique', 'message' => Yii::t('messages', 'This email address has already been taken.')]
+        ];
+    }
+
+    public function getPasswordRules($attribute = 'password')
+    {
+        return [
+            [$attribute, 'string', 'min' => 5]
+        ];
+    }
+
+
+    /**
+     * {@inheritdoc}
+     */
     public function behaviors()
     {
         return [
@@ -55,32 +82,7 @@ class User extends \denis909\yii\ActiveRecord implements IdentityInterface
                     'created_at' => 'createdAsDatetime', 
                     'updated_at' => 'updatedAsDatetime'
                 ]
-            ],
-            /*
-            [
-                'class' => AttributeChangedBehavior::class,
-                'attributes' => ['avatar'],
-                'event' => function($event) {
-
-                    if ($event->sender->avatar)
-                    {
-                        $source = Yii::getAlias('@frontend/web/source' . $event->sender->avatar)
-
-                        if (!rename($source, $target))
-                        {
-                            throw new Exception('Rename failed.');
-                        }
-
-                        var_dump($this->avatar);
-
-                        die;
-
-                        $event->sender->avatar = '/users' . $event->sender->avatar; 
-
-                    }
-                }
             ]
-            */
         ];
     }
 
@@ -90,18 +92,6 @@ class User extends \denis909\yii\ActiveRecord implements IdentityInterface
             self::STATUS_ACTIVE => Yii::t('user', 'Active'), 
             self::STATUS_INACTIVE => Yii::t('user', 'Inactive'), 
             self::STATUS_DELETED => Yii::t('user', 'Deleted')
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function rules()
-    {
-        return [
-            [['created_at', 'updated_at'], 'number', 'integerOnly' => true, 'enableClientValidation' => false],
-            ['status', 'default', 'value' => self::STATUS_INACTIVE],
-            ['status', 'in', 'range' => array_keys(static::statusList())],
         ];
     }
 
@@ -130,6 +120,17 @@ class User extends \denis909\yii\ActiveRecord implements IdentityInterface
     public static function findByUsername($username)
     {
         return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
+    }
+
+    /**
+     * Finds user by email
+     *
+     * @param string $email
+     * @return static|null
+     */
+    public static function findByEmail($email)
+    {
+        return static::findOne(['email' => $email, 'status' => self::STATUS_ACTIVE]);
     }
 
     /**
@@ -271,6 +272,9 @@ class User extends \denis909\yii\ActiveRecord implements IdentityInterface
         return parent::beforeSave($insert);
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function attributeLabels()
     {
         return [
@@ -280,9 +284,53 @@ class User extends \denis909\yii\ActiveRecord implements IdentityInterface
             'updated_at' => Yii::t('user', 'Updated'),
             'status' => Yii::t('user', 'Status'),
             'password_hash' => Yii::t('user', 'Password'),
-            'email' => Yii::t('user', 'E-mail'),
-            'avatar' => Yii::t('user', 'Avatar')
+            'email' => Yii::t('user', 'E-mail')
         ];
+    }
+
+    public function isStatus($status)
+    {
+        return $status == $this->status;
+    }
+
+    public function setStatus($status, $save = false, $validate = true, $attributes = null)
+    {
+        $this->status = $status;
+
+        if ($save && !$this->save($validate, $attributes))
+        {
+            throw new Exception($this->firstError);
+        }        
+    }
+
+    public function getIsStatusActive()
+    {
+        return $this->isStatus(static::STATUS_ACTIVE);
+    }
+
+    public function getIsStatusInactive()
+    {
+        return $this->isStatus(static::STATUS_INACTIVE);
+    }
+
+    public function getIsStatusDeleted()
+    {
+        return $this->isStatus(static::STATUS_DELETED);
+    }
+
+    public function setStatusActive($save = false, $validate = true, $attributes = null)
+    {
+        $this->setStatus(static::STATUS_ACTIVE, $save, $validate, $attributes);
+    }
+
+    public function setStatusDeleted($save = false, $validate = true, $attributes = null)
+    {
+        $this->setStatus(static::STATUS_DELETED, $save, $validate, $attributes);
+    }
+
+    public function setStatusInactive($save = false, $validate = true, $attributes = null)
+    {
+        $this->setStatus(static::STATUS_INACTIVE, $save, $validate, $attributes);
     }
 
 }

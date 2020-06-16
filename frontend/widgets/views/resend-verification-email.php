@@ -10,6 +10,8 @@ use frontend\theme\ActiveForm;
 
 <?php $form = ActiveForm::begin(['id' => 'resend-verification-email-form']);?>
 
+<?= $form->errorSummary($model);?>
+
 <?= $form->field($model, 'email')->textInput(['autofocus' => true]);?>
 
 <div class="form-group">

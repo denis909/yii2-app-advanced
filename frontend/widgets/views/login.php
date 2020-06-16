@@ -9,6 +9,8 @@ use frontend\theme\ActiveForm;
 ?>
 <?php $form = ActiveForm::begin(['id' => 'login-form']);?>
 
+<?= $form->errorSummary($model);?>
+
 <?= $form->field($model, 'username')->textInput(['autofocus' => true]);?>
 
 <?= $form->field($model, 'password')->passwordInput();?>

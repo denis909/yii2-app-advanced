@@ -8,9 +8,13 @@ use frontend\theme\ActiveForm;
 
 ?>
 
-<?php $form = ActiveForm::begin(['id' => 'reset-password-form']);?>
+<?php $form = ActiveForm::begin(['id' => 'profile-form']);?>
 
 <?= $form->errorSummary($model);?>
+
+<?= $form->field($model, 'username')->textInput(['disabled' => true]);?>
+
+<?= $form->field($model, 'email')->textInput(['disabled' => true]);?>
 
 <?= $form->field($model, 'password')->passwordInput(['autofocus' => true]);?>
 

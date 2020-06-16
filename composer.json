@@ -23,7 +23,8 @@
         "denis909/yii2-backend": "*",
         "denis909/yii2-active-record": "*",
         "denis909/yii2-theme-sbadmin2-backend": "*",
-        "denis909/yii2-theme-tabler-frontend": "*"
+        "denis909/yii2-theme-tabler-frontend": "*",
+        "denis909/yii2-datetime-formatter-behavior": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

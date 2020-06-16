@@ -10,6 +10,8 @@ use frontend\theme\ActiveForm;
 
 <?php $form = ActiveForm::begin(['id' => 'form-signup']);?>
 
+<?= $form->errorSummary($model);?>
+
 <?= $form->field($model, 'username')->textInput(['autofocus' => true]);?>
 
 <?= $form->field($model, 'email');?>

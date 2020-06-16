@@ -10,6 +10,8 @@ use frontend\theme\Html;
 
 <?php $form = ActiveForm::begin(['id' => 'request-password-reset-form']);?>
 
+<?= $form->errorSummary($model);?>
+
 <?= $form->field($model, 'email')->textInput(['autofocus' => true]);?>
 
 <div class="form-group">
