@@ -3,6 +3,9 @@
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
+
+$this->params['breadcrumbs'][] = ['label' => Yii::t('backend', 'Dashboard')];
+
 ?>
 <div class="site-index">
 

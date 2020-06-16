@@ -21,17 +21,8 @@ $return = [
         'glide' => '\trntv\glide\controllers\GlideController'
     ],
     'components' => [
-        'backendTheme' => [
-            'class' => 'denis909\sbadmin2\Theme'
-        ],
         'request' => [
             'csrfParam' => '_csrf-backend'
-        ],
-        'user' => [
-            'class' => 'frontend\components\FrontendWebUser'
-        ],
-        'backendUser' => [
-            'class' => 'backend\components\BackendWebUser'
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend

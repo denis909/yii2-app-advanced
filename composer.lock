@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3cf6ffd9c40ec9a89cb8eeb92c6f4a14",
+    "content-hash": "9dea67b695c58772f42e8a5c68f02ff5",
     "packages": [
         {
             "name": "bower-asset/glyphicons",
@@ -252,12 +252,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-backend.git",
-                "reference": "c9289f7c3049fc7ffd9963f0c53f4408eea3ac63"
+                "reference": "54e9d569eb1ee05a9d407fc9969cb52ef810e124"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-backend/zipball/c9289f7c3049fc7ffd9963f0c53f4408eea3ac63",
-                "reference": "c9289f7c3049fc7ffd9963f0c53f4408eea3ac63",
+                "url": "https://api.github.com/repos/denis909/yii2-backend/zipball/54e9d569eb1ee05a9d407fc9969cb52ef810e124",
+                "reference": "54e9d569eb1ee05a9d407fc9969cb52ef810e124",
                 "shasum": ""
             },
             "require": {
@@ -275,7 +275,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-06-16T11:39:37+00:00"
+            "time": "2020-06-16T20:41:30+00:00"
         },
         {
             "name": "denis909/yii2-backend-theme",
@@ -524,12 +524,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-frontend.git",
-                "reference": "44bf66f05314ecc55ad776a802f852e500b24f5e"
+                "reference": "2dbfffff9cff37ea28e9b8b756308c598ceb8771"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-frontend/zipball/44bf66f05314ecc55ad776a802f852e500b24f5e",
-                "reference": "44bf66f05314ecc55ad776a802f852e500b24f5e",
+                "url": "https://api.github.com/repos/denis909/yii2-frontend/zipball/2dbfffff9cff37ea28e9b8b756308c598ceb8771",
+                "reference": "2dbfffff9cff37ea28e9b8b756308c598ceb8771",
                 "shasum": ""
             },
             "require": {
@@ -545,7 +545,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-06-16T11:38:26+00:00"
+            "time": "2020-06-16T20:42:15+00:00"
         },
         {
             "name": "denis909/yii2-frontend-theme",
@@ -684,6 +684,29 @@
             "time": "2020-04-19T09:03:41+00:00"
         },
         {
+            "name": "denis909/yii2-root",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-root.git",
+                "reference": "da9d451b6bfdf738e49cff1fb5b7469e7295b041"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-root/zipball/da9d451b6bfdf738e49cff1fb5b7469e7295b041",
+                "reference": "da9d451b6bfdf738e49cff1fb5b7469e7295b041",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\yii\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2020-06-11T15:34:30+00:00"
+        },
+        {
             "name": "denis909/yii2-theme",
             "version": "dev-master",
             "source": {
@@ -720,12 +743,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-theme-sbadmin2.git",
-                "reference": "257957b4f117b83d296494fff3bcdfcec11bfefb"
+                "reference": "e72874b7a9f5dc75b3159b796c5b5e201207d0da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-theme-sbadmin2/zipball/257957b4f117b83d296494fff3bcdfcec11bfefb",
-                "reference": "257957b4f117b83d296494fff3bcdfcec11bfefb",
+                "url": "https://api.github.com/repos/denis909/yii2-theme-sbadmin2/zipball/e72874b7a9f5dc75b3159b796c5b5e201207d0da",
+                "reference": "e72874b7a9f5dc75b3159b796c5b5e201207d0da",
                 "shasum": ""
             },
             "require": {
@@ -742,7 +765,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2020-06-12T07:54:58+00:00"
+            "time": "2020-06-16T21:23:22+00:00"
         },
         {
             "name": "denis909/yii2-theme-sbadmin2-backend",

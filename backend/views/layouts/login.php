@@ -1,5 +1,5 @@
 <?php
 
-$theme = Yii::$app->backendTheme;
+use backend\theme\LoginLayout;
 
-echo $theme->loginLayout(['content' => $content]);
+echo LoginLayout::widget(['content' => $content]);

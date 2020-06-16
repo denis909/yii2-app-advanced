@@ -11,5 +11,6 @@ return [
     'Guest' => 'Гость',
     'Profile' => 'Настройки',
     'Remember Me' => 'Запомнить меня',
-    'Logout' => 'Выйти'
+    'Logout' => 'Выйти',
+    'Do you really want to logout?' => 'Вы действительно хотите выйти?'
 ];

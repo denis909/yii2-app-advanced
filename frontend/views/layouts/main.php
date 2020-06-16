@@ -37,7 +37,7 @@ $params = Yii::$app->frontend->mainLayoutParams([
             'linkOptions' => [
                 'data-method' => 'POST',
                 'data-params' => [Yii::$app->request->csrfParam => Yii::$app->request->csrfToken],
-                'data-confirm' => Yii::t('messages', 'Do you really want to logout?')
+                'data-confirm' => Yii::t('frontend', 'Do you really want to logout?')
             ]
         ]
     ]

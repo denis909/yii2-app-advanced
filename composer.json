@@ -19,6 +19,7 @@
         "yiisoft/yii2": "~2.0.14",
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
         "denis909/cascade-filesystem": "*",
+        "denis909/yii2-root": "*",
         "denis909/yii2-frontend": "*",
         "denis909/yii2-backend": "*",
         "denis909/yii2-active-record": "*",

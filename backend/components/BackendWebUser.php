@@ -2,6 +2,11 @@
 
 namespace backend\components;
 
-class BackendWebUser extends \denis909\yii\backendUser\BackendWebUser
+use denis909\yii\RootUser;
+
+class BackendWebUser extends \denis909\backend\BackendWebUser
 {
+
+    public $identityClass = RootUser::class;
+
 }

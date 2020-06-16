@@ -2,6 +2,9 @@
 
 namespace backend\components;
 
-class BackendController extends \denis909\yii\backendUser\BackendController
+class BackendController extends \denis909\backend\BackendController
 {
+
+    public $userComponent = 'backendUser';
+
 }

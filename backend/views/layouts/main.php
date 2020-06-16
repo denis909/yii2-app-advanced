@@ -1,26 +1,30 @@
 <?php
 
-use yii\helpers\ArrayHelper;
+use yii\web\YiiAsset;
+use backend\theme\MainLayout;
 
-$userComponent = Yii::$app->controller->userComponent;
+YiiAsset::register($this);
 
-$user = Yii::$app->{$userComponent}->identity;
-
-$theme = Yii::$app->backendTheme;
-
-backend\assets\AppAsset::register($this);
-
-echo $theme->mainLayout([
-    'copyright' => false,
-    'optionsMenu' => Yii::$app->params['backendOptionsMenu'] ?? [],
+echo MainLayout::widget(Yii::$app->backend->mainLayoutParams([
     'content' => $content,
-    'breadcrumbs' => $this->params['breadcrumbs'] ?? [],
-    'user' => $user,
-    'infoMessages' => Yii::$app->session->getFlash('info'),
-    'successMessages' => Yii::$app->session->getFlash('success'),
-    'errorMessages' => Yii::$app->session->getFlash('error'),
-    'actionMenu' => ArrayHelper::getValue($this->params, 'actionMenu', []),
-    'mainMenu' => ArrayHelper::getValue(Yii::$app->params, 'backendMenu'),
-    'enableCard' => ArrayHelper::getValue($this->params, 'enableCard', true),
-    'cardTitle' => ArrayHelper::getValue($this->params, 'cardTitle')  
-]);
+    'user' => Yii::$app->backendUser->identity,
+    'mainMenu' => [
+        'index' => [
+            'url' => ['site/index'],
+            'label' => Yii::t('backend', 'Dashboard'),
+            'icon' => 'fas fa-fw fa-home'
+        ]
+    ],
+    'accountMenu' => [
+        'logout' => [
+            'label' => Yii::t('backend', 'Logout'),
+            'url' => ['site/logout'],
+            'linkOptions' => [
+                'data-method' => 'POST',
+                'data-confirm' => Yii::t('backend', 'Do you really want to logout?')
+            ],
+            'icon' => 'fa fa-fw fa-sign-out-alt'
+        ]
+    ],
+    'username' => Yii::$app->backendUser->identity->username,
+]));

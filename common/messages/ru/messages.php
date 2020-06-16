@@ -16,7 +16,6 @@ return [
     'Password reset token cannot be blank.' => 'Токен для сброса пароля не может быть пустым.',
     'Wrong password reset token.' => 'Неверный токен для сброса пароля.',
     'There is no inactive user with this email address.' => 'Пользователя требующего подтверждения с таким email не найдено.',
-    'Do you really want to logout?' => 'Вы действительно хотите выйти?',
     'Profile saved.' => 'Профиль сохранен.',
     'Verify email token cannot be blank.' => 'Токен для сброса пароля не может быть пустым.',
     'Wrong verify email token.' => 'Неверный токен подверждения email.',
