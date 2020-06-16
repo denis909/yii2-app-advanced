@@ -4,16 +4,18 @@
 
 use frontend\theme\Html;
 
-$this->title = Yii::t('frontend', 'Login');
+$content = $this->render('/templates/login', [
+    'form' => frontend\widgets\Login::widget([
+        'model' => $model,
+        'passwordHint' => Yii::t('frontend', 'If you forgot your password you can {link}.', [
+            'link' => Html::a(Yii::t('frontend', 'reset it'), ['site/request-password-reset']),
+        ]),
+        'usernameHint' => Yii::t('frontend', 'Need new verification email? {link}', [
+            'link' => Html::a(Yii::t('frontend', 'Resend'), ['site/resend-verification-email'])
+        ])
+    ])
+]);
+
 $this->params['breadcrumbs'][] = $this->title;
 
-?>
-<p>
-If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']);?>.
-<br>
-Need new verification email? <?= Html::a('Resend', ['site/resend-verification-email']);?>
-</p>
-
-<p>Please fill out the following fields to login:</p>
-
-<?= frontend\widgets\Login::widget(['model' => $model]);?>
+echo $content;

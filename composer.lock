@@ -252,12 +252,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/denis909/yii2-backend.git",
-                "reference": "54e9d569eb1ee05a9d407fc9969cb52ef810e124"
+                "reference": "e235dc991b25684a05d09cc4f7fe3afc2dd0a46b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/denis909/yii2-backend/zipball/54e9d569eb1ee05a9d407fc9969cb52ef810e124",
-                "reference": "54e9d569eb1ee05a9d407fc9969cb52ef810e124",
+                "url": "https://api.github.com/repos/denis909/yii2-backend/zipball/e235dc991b25684a05d09cc4f7fe3afc2dd0a46b",
+                "reference": "e235dc991b25684a05d09cc4f7fe3afc2dd0a46b",
                 "shasum": ""
             },
             "require": {
@@ -275,7 +275,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-06-16T20:41:30+00:00"
+            "time": "2020-06-16T21:32:12+00:00"
         },
         {
             "name": "denis909/yii2-backend-theme",
