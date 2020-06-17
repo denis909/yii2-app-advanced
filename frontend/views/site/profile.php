@@ -1,13 +1,9 @@
 <?php
 
-/* @var $this yii\web\View */
+echo $this->render('/templates/profile', [
+    'form' => frontend\widgets\Profile::widget([
+        'model' => $model
+    ])
+]);
 
-$this->title = Yii::t('frontend', 'Profile');
 $this->params['breadcrumbs'][] = $this->title;
-
-?>
-<div class="site-profile">
-
-<?= frontend\widgets\Profile::widget(['model' => $model]);?>
-
-</div>

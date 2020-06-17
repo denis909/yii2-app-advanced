@@ -1,15 +1,9 @@
 <?php
 
-/* @var $this yii\web\View */
+echo $this->render('/templates/resendVerificationEmail', [
+    'form' => frontend\widgets\ResendVerificationEmail::widget([
+        'model' => $model
+    ])
+]);
 
-$this->title = 'Resend verification email';
 $this->params['breadcrumbs'][] = $this->title;
-
-?>
-<div class="site-resend-verification-email">
-
-<p>Please fill out your email. A verification email will be sent there.</p>
-
-<?= frontend\widgets\ResendVerificationEmail::widget(['model' => $model]);?>
-
-</div>

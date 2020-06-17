@@ -12,11 +12,11 @@ use frontend\theme\ActiveForm;
 
 <?= $form->errorSummary($model);?>
 
-<?= $form->field($model, 'username')->textInput(['autofocus' => true]);?>
+<?= $form->field($model, 'username')->textInput(['autofocus' => true])->hint($usernameHint)->error(false);?>
 
-<?= $form->field($model, 'email');?>
+<?= $form->field($model, 'email')->error(false);?>
 
-<?= $form->field($model, 'password')->passwordInput();?>
+<?= $form->field($model, 'password')->passwordInput()->hint($passwordHint)->error(false);?>
 
 <div class="form-group">
 

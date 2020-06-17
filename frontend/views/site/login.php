@@ -4,7 +4,7 @@
 
 use frontend\theme\Html;
 
-$content = $this->render('/templates/login', [
+echo $this->render('/templates/login', [
     'form' => frontend\widgets\Login::widget([
         'model' => $model,
         'passwordHint' => Yii::t('frontend', 'If you forgot your password you can {link}.', [
@@ -17,5 +17,3 @@ $content = $this->render('/templates/login', [
 ]);
 
 $this->params['breadcrumbs'][] = $this->title;
-
-echo $content;
