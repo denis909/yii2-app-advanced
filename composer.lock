@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9dea67b695c58772f42e8a5c68f02ff5",
+    "content-hash": "137328d661265620b0607ee1ad8088f6",
     "packages": [
         {
             "name": "bower-asset/glyphicons",
@@ -245,6 +245,38 @@
                 }
             ],
             "time": "2020-04-18T15:57:03+00:00"
+        },
+        {
+            "name": "denis909/yii2-attribute-typecast-behavior",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-attribute-typecast-behavior.git",
+                "reference": "7cb3d532bbafd8639706ff0deaf8f87d9f3b516f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-attribute-typecast-behavior/zipball/7cb3d532bbafd8639706ff0deaf8f87d9f3b516f",
+                "reference": "7cb3d532bbafd8639706ff0deaf8f87d9f3b516f",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\yii\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "denis909",
+                    "email": "mail@denis909.spb.ru"
+                }
+            ],
+            "time": "2020-04-19T10:52:31+00:00"
         },
         {
             "name": "denis909/yii2-backend",
@@ -845,6 +877,42 @@
                 "MIT"
             ],
             "time": "2020-06-14T12:27:34+00:00"
+        },
+        {
+            "name": "denis909/yii2-typecast-behavior",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/denis909/yii2-typecast-behavior.git",
+                "reference": "e1684e29c46ffb2a4bed53634441e9151557dff0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/denis909/yii2-typecast-behavior/zipball/e1684e29c46ffb2a4bed53634441e9151557dff0",
+                "reference": "e1684e29c46ffb2a4bed53634441e9151557dff0",
+                "shasum": ""
+            },
+            "require": {
+                "denis909/yii2-active-record": "*",
+                "denis909/yii2-attribute-typecast-behavior": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "denis909\\yii\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "denis909",
+                    "email": "mail@denis909.spb.ru"
+                }
+            ],
+            "time": "2020-04-19T10:19:34+00:00"
         },
         {
             "name": "doctrine/lexer",

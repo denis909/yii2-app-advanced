@@ -5,18 +5,11 @@ namespace backend\forms;
 use Yii;
 use yii\helpers\ArrayHelper;
 use denis909\yii\TypecastBehavior;
-use denis909\storage\components\StorageUploadBehavior;
 
 class UserForm extends \common\models\User
 {
 
-    const AVATAR_FILE_TYPES = ['gif', 'jpg', 'jpe', 'jpeg', 'png'];
-
-    const AVATAR_MAX_SIZE = 5000000; // 5 MiB
-
     public $password;
-
-    public $avatarFile;
 
     protected $unsafeAttributes = ['updated_at'];
 
@@ -30,7 +23,6 @@ class UserForm extends \common\models\User
     public function rules()
     {
         return ArrayHelper::merge(parent::rules(), [
-            ['avatarFile', 'safe'],
             [['username', 'email', 'status'], 'required'],
             [['password'], 'string', 'min' => 5, 'max' => 255],
             [
@@ -71,11 +63,6 @@ class UserForm extends \common\models\User
     {
         return ArrayHelper::merge(parent::behaviors(), [
             [
-                'class' => StorageUploadBehavior::class,
-                'attribute' => 'avatarFile',
-                'pathAttribute' => 'avatar'
-            ],
-            [
                 'class' => TypecastBehavior::class,
                 'attributeTypes' => [
                     'created_at' => TypecastBehavior::TYPE_UNIX_TIMESTAMP,
@@ -88,8 +75,7 @@ class UserForm extends \common\models\User
     public function attributeLabels()
     {
         return ArrayHelper::merge(parent::attributeLabels(), [
-            'password' => Yii::t('user', 'Password'),
-            'avatarFile' => Yii::t('user', 'Avatar')
+            'password' => Yii::t('user', 'Password')
         ]);
     }
 

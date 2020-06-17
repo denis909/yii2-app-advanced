@@ -10,34 +10,11 @@ use common\models\search\UserSearch as ModelSearch;
 use yii\web\HttpException;
 use yii\web\NotFoundHttpException;
 use yii\data\ActiveDataProvider;
-use denis909\storage\components\StorageDeleteAction;
-use denis909\storage\components\StorageUploadAction;
 
 class UserController extends \backend\components\BackendController
 {
 
     public $postActions = ['delete'];
-
-    public function actions()
-    {
-        return [
-            'upload-avatar' => [
-                'class' => StorageUploadAction::class,
-                'deleteRoute' => 'upload-delete-avatar',
-                'validationRules' => [
-                    [
-                        'file',
-                        'image',
-                        'maxSize' => ModelForm::AVATAR_MAX_SIZE,
-                        'extensions' => ModelForm::AVATAR_FILE_TYPES
-                    ]
-                ]
-            ],
-            'upload-delete-avatar' => [
-                'class' => StorageDeleteAction::class
-            ]
-        ];
-    }
 
     /**
      * Lists all models.
@@ -132,25 +109,6 @@ class UserController extends \backend\components\BackendController
         }
 
         return $this->redirect([$this->defaultAction]);
-    }
-
-    /**
-     * Finds the User model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param string $id
-     * @return Model the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    protected function findModel($id, $class = Model::class)
-    {
-        $model = $class::find()->where(['id' => $id])->one();
-
-        if ($model)
-        {
-            return $model;
-        }
-
-        throw new NotFoundHttpException('The requested page does not exist.');
     }
     
 }

@@ -1,21 +1,15 @@
 <?php
 
-use yii\web\JsExpression;
-use denis909\storage\widgets\StorageUpload;
+use backend\theme\ActiveForm;
+use backend\theme\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\User */
+/* @var $model backend\models\User */
 /* @var $form yii\widgets\ActiveForm */
-
-$theme = Yii::$app->backendTheme;
 
 ?>
 
-<?php $form = $theme->beginActiveForm([
-	'enableClientScript' => false,
-	'enableClientValidation' => false,
-	'enableAjaxValidation' => false
-]); ?>
+<?php $form = ActiveForm::begin();?>
 
 <?php
 
@@ -45,23 +39,14 @@ echo $form->field($model, 'status')->dropDownList($model->statusList, ['prompt' 
 
 echo $form->field($model, 'password')->passwordInput(['maxlength' => true]);
 
-echo $form->field($model, 'avatarFile')->widget(StorageUpload::class, [
-    'url' => ['upload-avatar'],
-    'sortable' => false,
-    'maxFileSize' => $model::AVATAR_MAX_SIZE,
-    'acceptFileTypes' => new JsExpression('/(\.|\/)(' . implode('|', $model::AVATAR_FILE_TYPES) . ')$/i'),
-    'maxNumberOfFiles' => 1,
-    'multiple' => false
-]);
-
 ?>
 
 <div class="form-group">
 
-<?php echo $theme->submitButton($model->isNewRecord ? Yii::t('backend', 'Create') : Yii::t('backend', 'Update'));?>
+<?php echo Html::saveButton(Yii::t('backend', 'Save'));?>
 
-<?php echo $theme->saveButton(Yii::t('backend', 'Save'));?>
+<?php echo Html::submitButton($model->isNewRecord ? Yii::t('backend', 'Create') : Yii::t('backend', 'Update'));?>
 
 </div>
 
-<?php $theme->endActiveForm();?>
+<?php $form::end();?>

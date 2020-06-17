@@ -1,5 +1,6 @@
 <?php
 
+use yii\helpers\ArrayHelper;
 use yii\web\YiiAsset;
 use backend\theme\MainLayout;
 
@@ -8,13 +9,7 @@ YiiAsset::register($this);
 echo MainLayout::widget(Yii::$app->backend->mainLayoutParams([
     'content' => $content,
     'user' => Yii::$app->backendUser->identity,
-    'mainMenu' => [
-        'index' => [
-            'url' => ['site/index'],
-            'label' => Yii::t('backend', 'Dashboard'),
-            'icon' => 'fas fa-fw fa-home'
-        ]
-    ],
+    'mainMenu' => Yii::$app->params['backendMenu'],
     'accountMenu' => [
         'logout' => [
             'label' => Yii::t('backend', 'Logout'),

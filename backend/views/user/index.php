@@ -1,8 +1,11 @@
 <?php
 
-use yii\helpers\Html;
+use backend\theme\GridView;
+use backend\theme\Html;
+use backend\theme\ActionColumn;
+
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\UserSearch */
+/* @var $searchModel common\models\UserSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 require __DIR__ . '/_common.php';
@@ -15,8 +18,6 @@ $this->params['actionMenu'][] = [
     'linkOptions' => ['class' => 'btn btn-success']
 ];
 
-$backendTheme = Yii::$app->backendTheme;
-
 $this->params['cardTitle'] = Yii::t('backend', 'Manage');
 
 ?>
@@ -24,12 +25,11 @@ $this->params['cardTitle'] = Yii::t('backend', 'Manage');
 <?php
 
 /*
-
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
 */?>
 
-<?= $backendTheme->gridView([
+<?= GridView::widget([
     'dataProvider' => $dataProvider,
     //'filterModel' => $searchModel,
     'columns' => [
@@ -44,15 +44,13 @@ $this->params['cardTitle'] = Yii::t('backend', 'Manage');
 				return $model->statusAsString;
 			}
         ],
-        'real_balance',
-        'id_partner',	
         */
         [
-            'class' => $backendTheme::ACTION_COLUMN,
+            'class' => ActionColumn::class,
             'template' => '{update}'
         ],
         [
-            'class' => $backendTheme::ACTION_COLUMN,
+            'class' => ActionColumn::class,
             'template' => '{delete}'                
         ]
     ]
