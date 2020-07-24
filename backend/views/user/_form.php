@@ -43,9 +43,9 @@ echo $form->field($model, 'password')->passwordInput(['maxlength' => true]);
 
 <div class="form-group">
 
-<?php echo Html::saveButton(Yii::t('backend', 'Save'));?>
-
 <?php echo Html::submitButton($model->isNewRecord ? Yii::t('backend', 'Create') : Yii::t('backend', 'Update'));?>
+
+<?php echo Html::saveButton(Yii::t('backend', 'Save'));?>
 
 </div>
 

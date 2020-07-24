@@ -1,6 +1,6 @@
 <?php
 
-use Denis909\CascadeFilesystem\CascadeConfig;
+use denis909\yii\CascadeConfig;
 
 $return = [
     'aliases' => [
@@ -36,6 +36,6 @@ $return = [
     ]
 ];
 
-$return = CascadeConfig::mergeConfig('common', $return);
+$return = CascadeConfig::mergeArray('common.php', $return);
 
 return $return;

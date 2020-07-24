@@ -1,6 +1,6 @@
 <?php
 
-use Denis909\CascadeFilesystem\CascadeConfig;
+use denis909\yii\CascadeConfig;
 
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
@@ -48,6 +48,6 @@ $return = [
     'params' => $params
 ];
 
-$return = CascadeConfig::mergeConfig('frontend', $return);
+$return = CascadeConfig::mergeArray('frontend.php', $return);
 
 return $return;
