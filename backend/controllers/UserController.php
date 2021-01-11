@@ -4,6 +4,7 @@ namespace backend\controllers;
 
 use Yii;
 use yii\helpers\Url;
+use yii\helpers\ArrayHelper;
 use common\models\User as Model;
 use backend\forms\UserForm as ModelForm;
 use common\models\search\UserSearch as ModelSearch;
@@ -15,6 +16,28 @@ class UserController extends \backend\components\BackendController
 {
 
     public $postActions = ['delete'];
+
+
+    public function actions()
+    {
+        return ArrayHelper::merge(parent::actions(), [
+            'upload-avatar' => [
+                'class' => 'denis909\storage\actions\StorageUploadAction',
+                'deleteRoute' => 'upload-delete-avatar',
+                'validationRules' => [
+                    [
+                        'file',
+                        'image',
+                        'maxSize' => Model::AVATAR_MAX_SIZE,
+                        'extensions' => Model::AVATAR_FILE_TYPES
+                    ]
+                ]
+            ],
+            'upload-delete-avatar' => [
+                'class' => 'denis909\storage\actions\StorageDeleteAction'
+            ]
+        ]);
+    }
 
     /**
      * Lists all models.
@@ -57,7 +80,7 @@ class UserController extends \backend\components\BackendController
             }
             else
             {
-                return $this->redirectBack();
+                return $this->goBack();
             }            
         } 
 
@@ -84,7 +107,7 @@ class UserController extends \backend\components\BackendController
             }
             else
             {
-                return $this->redirectBack();
+                return $this->goBack();
             }
         }
 

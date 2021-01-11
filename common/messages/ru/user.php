@@ -11,5 +11,6 @@ return [
     'Updated' => 'Обновлен',
     'Status' => 'Статус',
     'Password' => 'Пароль',
-    'Avatar' => 'Аватар'
+    'Avatar' => 'Аватар',
+    'Roles' => 'Роли'
 ];

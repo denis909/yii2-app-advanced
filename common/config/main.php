@@ -9,6 +9,11 @@ $return = [
     ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+            // uncomment if you want to cache RBAC items hierarchy
+            // 'cache' => 'cache',
+        ],
         'user' => [
             'class' => 'frontend\components\FrontendWebUser'
         ],
@@ -36,6 +41,6 @@ $return = [
     ]
 ];
 
-$return = CascadeConfig::mergeArray('common.php', $return);
+$return = CascadeConfig::loadArray('common.php', $return);
 
 return $return;

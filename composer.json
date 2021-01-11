@@ -27,7 +27,10 @@
         "denis909/yii2-theme-sbadmin2-backend": "*",
         "denis909/yii2-theme-tabler-frontend": "*",
         "denis909/yii2-datetime-formatter-behavior": "*",
-        "denis909/yii2-typecast-behavior": "*"
+        "denis909/yii2-typecast-behavior": "*",
+        "la-haute-societe/yii2-save-relations-behavior": "^1.7",
+        "denis909/yii2-rbac": "dev-main",
+        "denis909/yii2-storage": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

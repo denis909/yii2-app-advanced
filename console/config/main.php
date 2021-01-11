@@ -25,7 +25,10 @@ $return = [
         ],
         'migrate' => [
             'class' => 'yii\console\controllers\MigrateController',
-            'migrationTable' => 'migration'
+            'migrationTable' => 'migration',
+            'migrationPath' => [
+                '@console/migrations'
+            ]
         ]
     ],
     'components' => [
@@ -41,6 +44,6 @@ $return = [
     'params' => $params
 ];
 
-$return = CascadeConfig::mergeArray('console.php', $return);
+$return = CascadeConfig::loadArray('console.php', $return);
 
 return $return;

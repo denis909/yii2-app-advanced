@@ -52,6 +52,6 @@ $return = [
     'params' => $params
 ];
 
-$return = CascadeConfig::mergeArray('backend.php', $return);
+$return = CascadeConfig::loadArray('backend.php', $return);
 
 return $return;

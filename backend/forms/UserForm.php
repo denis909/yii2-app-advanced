@@ -11,6 +11,8 @@ class UserForm extends \common\models\User
 
     public $password;
 
+    public $avatarFile;
+
     protected $unsafeAttributes = ['updated_at'];
 
     public function init()
@@ -23,8 +25,9 @@ class UserForm extends \common\models\User
     public function rules()
     {
         return ArrayHelper::merge(parent::rules(), [
-            [['username', 'email', 'status'], 'required'],
+            [['username', /*'email', */'status'], 'required'],
             [['password'], 'string', 'min' => 5, 'max' => 255],
+            /*
             [
                 'password', 
                 'required', 
@@ -33,6 +36,7 @@ class UserForm extends \common\models\User
                 },
                 'enableClientValidation' => false
             ],
+            */
             [
                 'created_at',
                 'required',
@@ -40,7 +44,9 @@ class UserForm extends \common\models\User
                     return !$model->isNewRecord;
                 },
                 'enableClientValidation' => false                
-            ]
+            ],
+            ['roles', 'safe'],
+            ['avatarFile', 'safe']
         ]);
     }
 
@@ -63,10 +69,21 @@ class UserForm extends \common\models\User
     {
         return ArrayHelper::merge(parent::behaviors(), [
             [
+                'class' => 'denis909\storage\StorageUploadBehavior',
+                'attribute' => 'avatarFile',
+                'pathAttribute' => 'avatar'
+            ],
+            [
                 'class' => TypecastBehavior::class,
                 'attributeTypes' => [
                     'created_at' => TypecastBehavior::TYPE_UNIX_TIMESTAMP,
                     'updated_at' => TypecastBehavior::TYPE_UNIX_TIMESTAMP
+                ]
+            ],
+            'saveRelations' => [
+                'class'     => 'lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior',
+                'relations' => [
+                    'roles'
                 ]
             ]
         ]);
@@ -75,7 +92,8 @@ class UserForm extends \common\models\User
     public function attributeLabels()
     {
         return ArrayHelper::merge(parent::attributeLabels(), [
-            'password' => Yii::t('user', 'Password')
+            'password' => Yii::t('user', 'Password'),
+            'avatarFile' => Yii::t('user', 'Avatar')
         ]);
     }
 

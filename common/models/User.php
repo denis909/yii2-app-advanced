@@ -6,9 +6,7 @@ use Yii;
 use Exception;
 use yii\base\NotSupportedException;
 use yii\web\IdentityInterface;
-use yii\behaviors\TimestampBehavior;
-use denis909\yii\DatetimeFormatterBehavior;
-use denis909\yii\AttributeChangedBehavior;
+use yii\helpers\ArrayHelper;
 
 /**
  * User model
@@ -29,10 +27,14 @@ class User extends \denis909\yii\ActiveRecord implements IdentityInterface
 {
 
     const STATUS_DELETED = 0;
-
+    
     const STATUS_INACTIVE = 9;
     
     const STATUS_ACTIVE = 10;
+
+    const AVATAR_MAX_SIZE = 1024 * 1024 * 20;
+
+    const AVATAR_FILE_TYPES = ['jpg', 'png', 'gif', 'jpeg', 'jpe'];
 
     /**
      * {@inheritdoc}
@@ -74,16 +76,17 @@ class User extends \denis909\yii\ActiveRecord implements IdentityInterface
      */
     public function behaviors()
     {
-        return [
-            TimestampBehavior::class,
+        return ArrayHelper::merge(parent::behaviors(), [
+            'yii\behaviors\TimestampBehavior',
+            'denis909\yii\UserRbacBehavior',
             [
-                'class' => DatetimeFormatterBehavior::class,
+                'class' => 'denis909\yii\DatetimeFormatterBehavior',
                 'attributes' => [
                     'created_at' => 'createdAsDatetime', 
                     'updated_at' => 'updatedAsDatetime'
                 ]
             ]
-        ];
+        ]);
     }
 
     public static function statusList()
@@ -284,7 +287,8 @@ class User extends \denis909\yii\ActiveRecord implements IdentityInterface
             'updated_at' => Yii::t('user', 'Updated'),
             'status' => Yii::t('user', 'Status'),
             'password_hash' => Yii::t('user', 'Password'),
-            'email' => Yii::t('user', 'E-mail')
+            'email' => Yii::t('user', 'E-mail'),
+            'roles' => Yii::t('user', 'Roles')
         ];
     }
 
@@ -332,5 +336,14 @@ class User extends \denis909\yii\ActiveRecord implements IdentityInterface
     {
         $this->setStatus(static::STATUS_INACTIVE, $save, $validate, $attributes);
     }
+
+    /*
+    public function beforeValidate()
+    {
+        echo '<pre>';
+        print_r($_POST);
+        die;    
+    }
+    */
 
 }

@@ -15,6 +15,9 @@ $return = [
     'bootstrap' => ['log'],
     'language' => 'ru',
     'controllerNamespace' => 'frontend\controllers',
+    'controllerMap' => [
+        'glide' => '\trntv\glide\controllers\GlideController'
+    ],
     'components' => [
         'frontendUrlManager' => function() {
             return Yii::$app->urlManager;
@@ -48,6 +51,6 @@ $return = [
     'params' => $params
 ];
 
-$return = CascadeConfig::mergeArray('frontend.php', $return);
+$return = CascadeConfig::loadArray('frontend.php', $return);
 
 return $return;
